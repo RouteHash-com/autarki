@@ -6,9 +6,9 @@
 
 No platform. Just the sale.
 
-Autarki is the wallet and the shop on the server you already run. A merchant builds the order on the page. The guest pays at check-out. The words, the shop book, and the sale stay on that server.
+Autarki is the wallet and the shop on the server you already run. A merchant builds the order on the page. Use it as an in-person point of sale, or set the shop to Online and take the order over Nostr. The words, the shop book, and the sale stay on that server.
 
-Bitcoin Knots operators can keep the node they trust and put the register beside it. On StartOS, Autarki reads XBT from the Bitcoin Knots service on that server. The same page also takes a normal SHA-256d payment and, when you connect the node, XBTC.
+Bitcoin Knots operators can keep the node they trust and put the register beside it. On StartOS, Autarki reads XBT from the Bitcoin Knots service on that server. The same page also takes a normal SHA-256d payment and, when you connect the node, XBTC. A customer can pay at the counter or send the order from their own wallet.
 
 <p align="center">
   <img src="shop.png" alt="Autarki shop page for Sunrise Coffee Shop, with one bagel on the order and the Check-Out button" width="440">
@@ -19,6 +19,10 @@ Bitcoin Knots operators can keep the node they trust and put the register beside
 One page: Shop, Receive, Send, Balance, Ledger, and Settings.
 
 The first screen creates the wallet. Write the 24 words on paper before you leave that screen. A password for this copy is optional. Leave it blank and the 24 words stay in the clear, so a backup of this server is then the seed. A native SegWit phrase can be imported on that same screen. After that import you can set a password, or leave the copy unlocked.
+
+The shop opens as a point of sale. A guest at the counter uses Pay Counter, and the clerk ticket shows the last four characters of the order. Set the shop to Online when the sale is not at the counter. Online hides Pay Counter and that ticket. Publish announces the choice. Until you publish, customers still see the counter.
+
+Nostr is how a shop is found, and how an order reaches that shop, without a website of your own. Publish announces the shop name, the products for sale, and which nodes should receive an order. Check for orders brings a new order onto Check Outs. Paying is still a coin, cash, a card, or Lightning. The order itself does not move the money.
 
 XBT comes from Bitcoin Knots when that service is on the server. A normal SHA-256d address can be paid through Autarki's server until you connect your own node under Settings, then Coin Nodes. A silent-payment code is used only after that node is connected. XBTC has no public server in these packages. Connect that node under Settings, then Coin Nodes, when you use it.
 
@@ -115,4 +119,8 @@ The loaded image is named `autarki:0.1.0`. An install that tries to pull that na
 
 ## First sale
 
-Open Shop. Add the items. Read the tax lines and the estimated total. Write a note if the guest asked for one. Press Check-Out. The guide on the server is under Settings, then Read the guide.
+Open Shop. Add the items. Read the tax lines and the estimated total. Write a note if the guest asked for one.
+
+At the counter, press Check-Out. For an online order, publish the shop under Store, then Nostr, and press Check for orders when a customer has sent one.
+
+The guide on the server is under Settings, then Read the guide.
