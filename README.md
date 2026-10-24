@@ -26,13 +26,14 @@ Umbrel's Bitcoin app is Bitcoin Core. Autarki does not use it as the XBT node.
 
 ## Which file to download
 
-StartOS has one package in this release. Its name is `x86_64`. That is the 64-bit build for an AMD PC and for an Intel PC. StartOS does not use a separate file named amd64.
+StartOS has two packages in this release. `x86_64` is the 64-bit build for an AMD PC and for an Intel PC. `aarch64` is the build for a Raspberry Pi. StartOS does not use a separate file named amd64.
 
-Umbrel has two images. A PC uses amd64. Umbrel Home and a Raspberry Pi use arm64. The RouteHash community store installs the matching one for the machine.
+Umbrel has two images. A PC uses amd64. Umbrel Home and a Raspberry Pi use arm64. That Raspberry Pi image is already in this release. The RouteHash community store installs the matching one for the machine.
 
 | Install on | Machine | File |
 | --- | --- | --- |
 | StartOS | AMD or Intel, 64-bit | `autarki_x86_64.s9pk` |
+| StartOS | Raspberry Pi | `autarki_aarch64.s9pk` |
 | Umbrel | AMD or Intel, 64-bit | `autarki_0.1.0_amd64.tar` |
 | Umbrel Home or Raspberry Pi | ARM, 64-bit | `autarki_0.1.0_arm64.tar` |
 
@@ -42,7 +43,8 @@ https://github.com/RouteHash-com/autarki/releases/tag/0.1.0
 
 | File | Bytes | SHA-256 |
 | --- | ---: | --- |
-| `autarki_x86_64.s9pk` | 30408775 | `46fba7ea4e4b9098dd4d23c76d8b50a733cbba11b44b8e1e289c059bab355429` |
+| `autarki_x86_64.s9pk` | 30409446 | `e9aa1171ca0febe4b247b070df0e228dcf770c91446797bac1062f545cde3c11` |
+| `autarki_aarch64.s9pk` | 29029097 | `c9e2b9d5eb973eb15e7a3337f3e70de0c96103628e546cfbfb5e693146e80892` |
 | `autarki_0.1.0_amd64.tar` | 108975104 | `fbd1ae4dbb36ebbd5ad73b6a4b387306b8f89c72f7b65fef170da2208d9db08b` |
 | `autarki_0.1.0_arm64.tar` | 129971712 | `3c9ddbedcdc4e2c4ec616ed0b1fd808f4055284223512764b3ca370aa6e389ac` |
 
@@ -58,9 +60,7 @@ The line for your file ends in `OK` when the download matches. A partial downloa
 
 ## Install on StartOS
 
-Use this on a 64-bit AMD or Intel computer running StartOS.
-
-1. Download `autarki_x86_64.s9pk` and check it with the command above.
+1. Download the package that matches the server. An AMD or Intel server uses `autarki_x86_64.s9pk`. A Raspberry Pi uses `autarki_aarch64.s9pk`. Check it with the command above.
 2. In StartOS, sideload that file and install Autarki.
 3. Install Bitcoin Knots on the same server when you want Autarki to read XBT from Knots. If the Knots companion is installed, Autarki uses that service.
 4. Open Autarki.
