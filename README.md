@@ -8,7 +8,7 @@ No platform. Just the sale.
 
 Autarki is the wallet and the shop on the server you already run. A merchant builds the order on the page. Use it as an in-person point of sale, or set the shop to Online and take the order over Nostr. The words, the shop book, and the sale stay on that server.
 
-Bitcoin Knots operators can keep the node they trust and put the register beside it. On StartOS, Autarki reads XBT from the Bitcoin Knots service on that server. The same page also takes a normal SHA-256d payment and, when you connect the node, XBTC. A customer can pay at the counter or send the order from their own wallet.
+Ordinary XBT and SHA-256d use Autarki's servers until you connect your own node under Settings, then Coin Nodes. XBTC uses Autarki's public node until you connect your own. The StartOS package and the Umbrel package do not include that node. A customer can pay at the counter or send the order from their own wallet.
 
 <p align="center">
   <img src="shop.png" alt="Autarki shop page for Sunrise Coffee Shop, with one bagel on the order and the Check-Out button" width="440">
@@ -22,9 +22,9 @@ The first screen creates the wallet. Write the 24 words on paper before you leav
 
 The shop opens as a point of sale. A guest at the counter uses Pay Counter, and the clerk ticket shows the last four characters of the order. Set the shop to Online when the sale is not at the counter. Online hides Pay Counter and that ticket. Publish announces the choice. Until you publish, customers still see the counter.
 
-Nostr is how a shop is found, and how an order reaches that shop, without a website of your own. Publish announces the shop name, the products for sale, and which nodes should receive an order. Check for orders brings a new order onto Check Outs. Paying is still a coin, cash, a card, or Lightning. The order itself does not move the money.
+Nostr is how a shop is found, and how an order reaches that shop, without a website of your own. Publish announces the shop name, the products for sale, and which nodes should receive an order. Check for orders brings a new order onto Check Outs. Paying is still a coin, cash, a card, or Lightning. The order itself does not move the money. When the clerk marks a counter sale paid, the customer's page shows that order under Ledger, then Receipts.
 
-XBT comes from Bitcoin Knots when that service is on the server. A normal SHA-256d address can be paid through Autarki's server until you connect your own node under Settings, then Coin Nodes. A silent-payment code is used only after that node is connected. XBTC has no public server in these packages. Connect that node under Settings, then Coin Nodes, when you use it.
+The three chains are ordinary XBT, SHA-256d, and XBTC. XBTC is the third chain. Ordinary XBT and SHA-256d use Autarki's servers until you connect your own node under Settings, then Coin Nodes. A silent-payment code is used only after that node is connected. Until then the page gives a normal address. XBTC uses Autarki's public node until you connect your own. Where this copy includes Autarki's XBTC node, that node is used until you connect your own. The StartOS package and the Umbrel package do not include that node. Nostr uses Autarki's public node until you add another.
 
 Umbrel's Bitcoin app is Bitcoin Core. Autarki does not use it as the XBT node.
 
@@ -47,10 +47,10 @@ https://github.com/RouteHash-com/autarki/releases/tag/0.1.0
 
 | File | Bytes | SHA-256 |
 | --- | ---: | --- |
-| `autarki_x86_64.s9pk` | 30409446 | `e9aa1171ca0febe4b247b070df0e228dcf770c91446797bac1062f545cde3c11` |
-| `autarki_aarch64.s9pk` | 29029097 | `c9e2b9d5eb973eb15e7a3337f3e70de0c96103628e546cfbfb5e693146e80892` |
-| `autarki_0.1.0_amd64.tar` | 108975104 | `fbd1ae4dbb36ebbd5ad73b6a4b387306b8f89c72f7b65fef170da2208d9db08b` |
-| `autarki_0.1.0_arm64.tar` | 129971712 | `3c9ddbedcdc4e2c4ec616ed0b1fd808f4055284223512764b3ca370aa6e389ac` |
+| `autarki_x86_64.s9pk` | 30370587 | `321dc0c9fd3ce926bb93cb2d30f21a0968361dccd712968884e14856ffe97e7a` |
+| `autarki_aarch64.s9pk` | 29018910 | `514d71444db53e7667336c658ef84d74b60b4bfd305865ceb1eef65854d28c5c` |
+| `autarki_0.1.0_amd64.tar` | 109023232 | `b1404af28a5124092ba5a9495659e9ad736c25f40c138edbb68a99eedf5a83f6` |
+| `autarki_0.1.0_arm64.tar` | 130007552 | `1555fb86afe0493fd90456b69078beb7eaa2366148189618c2030c71d989508a` |
 
 ## Check the download
 
@@ -65,10 +65,9 @@ The line for your file ends in `OK` when the download matches. A partial downloa
 ## Install on StartOS
 
 1. Download the package that matches the server. An AMD or Intel server uses `autarki_x86_64.s9pk`. A Raspberry Pi uses `autarki_aarch64.s9pk`. Check it with the command above.
-2. In StartOS, sideload that file and install Autarki.
-3. Install Bitcoin Knots on the same server when you want Autarki to read XBT from Knots. If the Knots companion is installed, Autarki uses that service.
-4. Open Autarki.
-5. Create the wallet. Write the 24 words on paper before you leave the screen.
+2. In StartOS, sideload that file and install Autarki. Install does not ask for Bitcoin Knots or Bitcoin Core.
+3. Open Autarki.
+4. Create the wallet. Write the 24 words on paper before you leave the screen.
 
 The shop opens first, until the wallet exists. After that, the page opens on Receive.
 
@@ -85,9 +84,9 @@ https://github.com/RouteHash-com/umbrel-store
 
 3. Install Autarki.
 
-That store is the RouteHash community store. It is not the official Umbrel App Store. Umbrel builds the app from the program in `autarki/bin`. On a PC it uses `autarki-amd64`. On Umbrel Home or a Raspberry Pi it uses `autarki-arm64`.
+That store is the RouteHash community store. It is not the official Umbrel App Store. The Autarki listing there is version 0.1.1. Umbrel uses that version to offer this update. Umbrel builds the app from the program in `routehash-autarki/bin`. On a PC it uses `autarki-amd64`. On Umbrel Home or a Raspberry Pi it uses `autarki-arm64`.
 
-To check those programs yourself, open the `autarki` folder in the store and run:
+To check those programs yourself, open the `routehash-autarki` folder in the store and run:
 
 ```
 sha256sum -c SHA256SUMS
@@ -95,8 +94,8 @@ sha256sum -c SHA256SUMS
 
 | Program | SHA-256 |
 | --- | --- |
-| `bin/autarki-amd64` | `494b1d7b75739f231fbda82960c05ea9f6b596e5aed3d99b6f68fa1571034444` |
-| `bin/autarki-arm64` | `549e0f13e90d4e7b16c88654d663687fe145aa27dbdfd9a67b1f2dd79b1760f6` |
+| `bin/autarki-amd64` | `4e6620b3e1620db2941d31d7c33a09f40b960d2f2c42bee674b69dcf6dccb774` |
+| `bin/autarki-arm64` | `46b92c8ad95d39fa1a40d4697e4617f1b6b1e62db56c8b264e7351ba6387ffb8` |
 
 ## Install on Umbrel from a downloaded image
 
