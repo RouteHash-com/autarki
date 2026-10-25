@@ -6,7 +6,7 @@
 
 No platform. Just the sale.
 
-Autarki is the wallet and the Nostr shop. It runs on an AMD or Intel server and on a Raspberry Pi. On StartOS, a Raspberry Pi uses `autarki_aarch64.s9pk`. On Umbrel, Umbrel Home and a Raspberry Pi use the arm64 image. A merchant builds the order on the page. Use it as an in-person point of sale, or set the shop to Online and take the order over Nostr. The words, the shop book, and the sale stay on that server.
+Autarki is the wallet and the Nostr shop. It runs on an AMD or Intel server and on a Raspberry Pi. On StartOS, a Raspberry Pi uses `autarki_aarch64.s9pk`. On Umbrel, including Umbrel Home and a Raspberry Pi, install from the RouteHash community store. That listing installs on umbrelOS 1.x and on umbrelOS 2.0. This page has no umbrelOS file to download. A merchant builds the order on the page. Use it as an in-person point of sale, or set the shop to Online and take the order over Nostr. The words, the shop book, and the sale stay on that server.
 
 Ordinary XBT and SHA-256d use Autarki's servers until you connect your own node under Settings, then Coin Nodes. XBTC uses Autarki's public node until you connect your own. The StartOS package and the Umbrel package do not include that node. A customer can pay at the counter or send the order from their own wallet.
 
@@ -28,22 +28,48 @@ The three chains are ordinary XBT, SHA-256d, and XBTC. XBTC is the third chain. 
 
 Umbrel's Bitcoin app is Bitcoin Core. Autarki does not use it as the XBT node.
 
+## Install on Umbrel
+
+This page does not give you an umbrelOS file. umbrelOS 1.x and umbrelOS 2.0 use the same listing. It is version 0.1.2.
+
+1. In Umbrel, open Settings, then App stores, then Add a community app store.
+2. Paste this address:
+
+```
+https://github.com/RouteHash-com/umbrel-store
+```
+
+3. Install **Autarki - Wallet / Nostr Shop**.
+
+That store is the RouteHash community store. It is not the official Umbrel App Store. If the store is already added, or an install fails after you update to umbrelOS 2.0, remove this community store and add the same address again. Umbrel keeps the copy it already downloaded.
+
+Umbrel builds the app on the machine. On a PC it uses `autarki-amd64`. On Umbrel Home or a Raspberry Pi it uses `autarki-arm64`.
+
+To check those programs yourself, open the `routehash-autarki` folder in the store and run:
+
+```
+sha256sum -c SHA256SUMS
+```
+
+| Program | SHA-256 |
+| --- | --- |
+| `bin/autarki-amd64` | `4e6620b3e1620db2941d31d7c33a09f40b960d2f2c42bee674b69dcf6dccb774` |
+| `bin/autarki-arm64` | `46b92c8ad95d39fa1a40d4697e4617f1b6b1e62db56c8b264e7351ba6387ffb8` |
+
 ## Which file to download
 
-StartOS has two packages in this release. `x86_64` is the 64-bit build for an AMD PC and for an Intel PC. `aarch64` is the build for a Raspberry Pi. StartOS does not use a separate file named amd64.
-
-Umbrel has two images. A PC uses amd64. Umbrel Home and a Raspberry Pi use arm64. That Raspberry Pi image is already in this release. The RouteHash community store installs the matching one for the machine.
+StartOS uses a file from release 0.1.0. Umbrel does not. `x86_64` is the 64-bit build for an AMD PC and for an Intel PC. `aarch64` is the build for a Raspberry Pi. StartOS does not use a separate file named amd64.
 
 | Install on | Machine | File |
 | --- | --- | --- |
 | StartOS | AMD or Intel, 64-bit | `autarki_x86_64.s9pk` |
 | StartOS | Raspberry Pi | `autarki_aarch64.s9pk` |
-| Umbrel | AMD or Intel, 64-bit | `autarki_0.1.0_amd64.tar` |
-| Umbrel Home or Raspberry Pi | ARM, 64-bit | `autarki_0.1.0_arm64.tar` |
 
-Download the release:
+Download the StartOS package:
 
 https://github.com/RouteHash-com/autarki/releases/tag/0.1.0
+
+The same release also attaches `autarki_0.1.0_amd64.tar` and `autarki_0.1.0_arm64.tar`. Those are Docker images from this build. They are not an umbrelOS 2.0 install, and the community store does not use them. Sizes and checksums for every file on the release:
 
 | File | Bytes | SHA-256 |
 | --- | ---: | --- |
@@ -70,51 +96,6 @@ The line for your file ends in `OK` when the download matches. A partial downloa
 4. Create the wallet. Write the 24 words on paper before you leave the screen.
 
 The shop opens first, until the wallet exists. After that, the page opens on Receive.
-
-## Install on Umbrel from the community store
-
-This is the path that picks amd64 or arm64 for you.
-
-1. In Umbrel, open Settings, then App stores, then Add a community app store.
-2. Paste this address:
-
-```
-https://github.com/RouteHash-com/umbrel-store
-```
-
-3. Install Autarki - Wallet / Nostr Shop.
-
-That store is the RouteHash community store. It is not the official Umbrel App Store. The Autarki listing there is version 0.1.1. Umbrel uses that version to offer this update. Umbrel builds the app from the program in `routehash-autarki/bin`. On a PC it uses `autarki-amd64`. On Umbrel Home or a Raspberry Pi it uses `autarki-arm64`.
-
-To check those programs yourself, open the `routehash-autarki` folder in the store and run:
-
-```
-sha256sum -c SHA256SUMS
-```
-
-| Program | SHA-256 |
-| --- | --- |
-| `bin/autarki-amd64` | `4e6620b3e1620db2941d31d7c33a09f40b960d2f2c42bee674b69dcf6dccb774` |
-| `bin/autarki-arm64` | `46b92c8ad95d39fa1a40d4697e4617f1b6b1e62db56c8b264e7351ba6387ffb8` |
-
-## Install on Umbrel from a downloaded image
-
-Use this when you want to load the image yourself. Check the tar first.
-
-On an AMD or Intel Umbrel:
-
-```
-docker load -i autarki_0.1.0_amd64.tar
-```
-
-On Umbrel Home or a Raspberry Pi:
-
-```
-docker load -i autarki_0.1.0_arm64.tar
-docker tag autarki:0.1.0-arm64 autarki:0.1.0
-```
-
-The loaded image is named `autarki:0.1.0`. An install that tries to pull that name from the internet fails until this load has been done on that machine.
 
 ## First sale
 
