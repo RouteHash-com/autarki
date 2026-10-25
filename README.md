@@ -2,11 +2,11 @@
   <img src="icon.svg" alt="Autarki" width="128">
 </p>
 
-# Autarki
+# Autarki - Wallet / Nostr Shop
 
 No platform. Just the sale.
 
-Autarki is the wallet and the shop on the server you already run. A merchant builds the order on the page. Use it as an in-person point of sale, or set the shop to Online and take the order over Nostr. The words, the shop book, and the sale stay on that server.
+Autarki is the wallet and the Nostr shop. It runs on an AMD or Intel server and on a Raspberry Pi. On StartOS, a Raspberry Pi uses `autarki_aarch64.s9pk`. On Umbrel, Umbrel Home and a Raspberry Pi use the arm64 image. A merchant builds the order on the page. Use it as an in-person point of sale, or set the shop to Online and take the order over Nostr. The words, the shop book, and the sale stay on that server.
 
 Ordinary XBT and SHA-256d use Autarki's servers until you connect your own node under Settings, then Coin Nodes. XBTC uses Autarki's public node until you connect your own. The StartOS package and the Umbrel package do not include that node. A customer can pay at the counter or send the order from their own wallet.
 
@@ -82,7 +82,7 @@ This is the path that picks amd64 or arm64 for you.
 https://github.com/RouteHash-com/umbrel-store
 ```
 
-3. Install Autarki.
+3. Install Autarki - Wallet / Nostr Shop.
 
 That store is the RouteHash community store. It is not the official Umbrel App Store. The Autarki listing there is version 0.1.1. Umbrel uses that version to offer this update. Umbrel builds the app from the program in `routehash-autarki/bin`. On a PC it uses `autarki-amd64`. On Umbrel Home or a Raspberry Pi it uses `autarki-arm64`.
 
