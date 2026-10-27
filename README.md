@@ -30,7 +30,7 @@ Umbrel's Bitcoin app is Bitcoin Core. Autarki does not use it as the XBT node.
 
 ## Install on Umbrel
 
-This page does not give you an umbrelOS file. umbrelOS 1.x and umbrelOS 2.0 use the same listing. It is version 0.1.4. A wallet from 0.1.3 stays.
+This page does not give you an umbrelOS file. umbrelOS 1.x and umbrelOS 2.0 use the same listing. It is version 0.1.5. A wallet from 0.1.4 stays.
 
 1. In Umbrel, open Settings, then App stores, then Add a community app store.
 2. Paste this address:
@@ -53,8 +53,8 @@ sha256sum -c SHA256SUMS
 
 | Program | SHA-256 |
 | --- | --- |
-| `bin/autarki-amd64` | `aa4f193b7cc348791b4949726354f4ed83c496e31e41ae3f9fc84279d7415297` |
-| `bin/autarki-arm64` | `519b11d2c9f3a5f56888d250fb1794e5f44aaf08ad868df74370b8ad3fa9fc1b` |
+| `bin/autarki-amd64` | `ef826cf7974fcc5af0c723093599cbaf36c47adee5e722f97872f3579e72e968` |
+| `bin/autarki-arm64` | `bb651b8a1707dde85817fc159cad7f1e0efdba143c7b81e4a8ae23f2ec9b8f31` |
 
 ## Which file to download
 
@@ -73,12 +73,12 @@ The same release also attaches `autarki_0.1.0_amd64.tar` and `autarki_0.1.0_arm6
 
 | File | Bytes | SHA-256 |
 | --- | ---: | --- |
-| `autarki_x86_64.s9pk` | 30403722 | `3ade87baf4d866ba594318abffcb62f60a99ed812838d46e0ede46f8c1c4d10c` |
-| `autarki_aarch64.s9pk` | 29035661 | `1d0e75a466474f6faf844be556a4abb049567fde2725d27ad86dce98d7826c03` |
-| `autarki_0.1.0_amd64.tar` | 109133824 | `b575762dcf20ae05f5f87d0079f5c9b1fffb2fd0cbde0ec47c99b6c6e2f36acb` |
-| `autarki_0.1.0_arm64.tar` | 130140672 | `6a71894c1c1d76b87e5fc0c69f308550a610a928ba18ca6afa1244633ae934f6` |
+| `autarki_x86_64.s9pk` | 30477241 | `514f5d218987f2468fa086aa6f34a562c542ab4b45272e072dc2428b74655b6b` |
+| `autarki_aarch64.s9pk` | 29060028 | `317fa231f11d76fd9aaf118599ffd976041f14f5626a11004311eecf537021e8` |
+| `autarki_0.1.0_amd64.tar` | 109682688 | `bc28216a21a92eed96d0a4e0da9f69657e0ce1599dc401c9aec135fbb074dce3` |
+| `autarki_0.1.0_arm64.tar` | 130574848 | `56c0470fa417d79fc0ca2afb3107f12375c967601b01ce8bc288678afa8cb3f1` |
 
-The package version inside each StartOS file is 0.1.0:2. Sideloading it replaces 0.1.0:1, and the wallet stays.
+The package version inside each StartOS file is 0.1.0:3. Sideloading it replaces 0.1.0:2, and the wallet stays.
 
 ## Check the download
 
