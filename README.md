@@ -26,6 +26,8 @@ Nostr is how a shop is found, and how an order reaches that shop, without a webs
 
 The three chains are ordinary XBT, SHA-256d, and XBTC. XBTC is the third chain. Ordinary XBT and SHA-256d use Autarki's servers until you connect your own node under Settings, then Coin Nodes. A silent-payment code for an address of yours is used only after that node is connected. Until then the page gives a normal address. Paying a shop order uses the stall's silent-payment code from that order. A code you type on Send uses your own node. XBTC uses Autarki's public node until you connect your own. Where this copy includes Autarki's XBTC node, that node is used until you connect your own. The StartOS package and the Umbrel package do not include that node. Nostr uses Autarki's public node until you add another. Blake2b Lightning and SHA-256 Lightning are your own nodes. The seed stays in this wallet. The longer notes on those cards stay closed until you open them. The address, the certificate, and the channel amount stay on the page.
 
+On Receive, Send, Balance, and the till, the ordinary Bitcoin chip says BTC. Under Settings, then SHA-256 Lightning, the save button says Save BTC Lightning. Remove this node, under Settings, then Coin Nodes, hides that chain on those screens, on checkout, and on Check Outs. Use this node brings it back. The choice stays in this browser. A saved connection stays on this computer.
+
 Umbrel's Bitcoin app is Bitcoin Core. Autarki does not use it as the XBT node.
 
 ## Ship an online order
@@ -50,7 +52,7 @@ Balance lists Open Shop Orders. Once the RouteHash account is saved, it also lis
 
 ## Install on Umbrel
 
-This page does not give you an umbrelOS file. umbrelOS 1.x and umbrelOS 2.0 use the same listing. It is version 0.1.5. A wallet from 0.1.4 stays. If the store still shows 0.1.4, remove this community store and add the same address again.
+This page does not give you an umbrelOS file. umbrelOS 1.x and umbrelOS 2.0 use the same listing. It is version 0.1.6. A wallet from 0.1.5 stays. If the store still shows 0.1.5, remove this community store and add the same address again.
 
 1. In Umbrel, open Settings, then App stores, then Add a community app store.
 2. Paste this address:
@@ -73,8 +75,8 @@ sha256sum -c SHA256SUMS
 
 | Program | SHA-256 |
 | --- | --- |
-| `bin/autarki-amd64` | `ef826cf7974fcc5af0c723093599cbaf36c47adee5e722f97872f3579e72e968` |
-| `bin/autarki-arm64` | `bb651b8a1707dde85817fc159cad7f1e0efdba143c7b81e4a8ae23f2ec9b8f31` |
+| `bin/autarki-amd64` | `9bd4bf371fffa422ebcbbecce746cd1f47c9f685da2d5adf149bf9d242f483db` |
+| `bin/autarki-arm64` | `d1f00978207759b368c4ef153a734588d97ed8f50564f3484ded0ba7f1d9ff79` |
 
 ## Which file to download
 
@@ -93,12 +95,12 @@ The same release also attaches `autarki_0.1.0_amd64.tar` and `autarki_0.1.0_arm6
 
 | File | Bytes | SHA-256 |
 | --- | ---: | --- |
-| `autarki_x86_64.s9pk` | 30477241 | `514f5d218987f2468fa086aa6f34a562c542ab4b45272e072dc2428b74655b6b` |
-| `autarki_aarch64.s9pk` | 29060028 | `317fa231f11d76fd9aaf118599ffd976041f14f5626a11004311eecf537021e8` |
-| `autarki_0.1.0_amd64.tar` | 109682688 | `bc28216a21a92eed96d0a4e0da9f69657e0ce1599dc401c9aec135fbb074dce3` |
-| `autarki_0.1.0_arm64.tar` | 130574848 | `56c0470fa417d79fc0ca2afb3107f12375c967601b01ce8bc288678afa8cb3f1` |
+| `autarki_x86_64.s9pk` | 30489748 | `92ab4c8f099e8f29f6ea73682b1a57f8f19ae720cd4637ffbf99fcfc7a54f904` |
+| `autarki_aarch64.s9pk` | 29068439 | `92f3517a8b51133f3a3626ea2f938d94b6d6c924ee9ee6442975d66d7492aa05` |
+| `autarki_0.1.0_amd64.tar` | 109699072 | `67c314e8434e46d81025ecb4ac16074739e12b4e80ef1366e241222db5e1acb6` |
+| `autarki_0.1.0_arm64.tar` | 130574848 | `b4795d4b2b74ff5e4e15166c56c860f7634b7f1f2b8892bd1d127c10956cccb4` |
 
-The package version inside each StartOS file is 0.1.0:3. Sideloading it replaces 0.1.0:2, and the wallet stays.
+The package version inside each StartOS file is 0.1.0:4. Sideloading it replaces 0.1.0:3, and the wallet stays.
 
 ## Check the download
 
