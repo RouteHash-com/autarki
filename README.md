@@ -44,6 +44,8 @@ Classifieds stays hidden until you turn on Enable Classifieds under Settings. A 
 
 The categories are Goods, Services, Jobs, Rentals, Giveaways, and Personals. Goods, a service, and a rental ask for a price. A job asks Offer or Hire. A giveaway and a personal do not ask for a price. An ad can carry up to four image addresses. A map link is an https address from OpenStreetMap, Google Maps, or Apple Maps. What is a map link? tells you to copy that address and paste it into Map. Use my location copies the shop's saved country, province or state, city, neighbourhood, and map link. It does not open that explanation.
 
+Search sits to the left of the keyword. Post and Check for orders are icons on the same row as Show Ignored and View blocked. Opening Post hides the ads. A classified ad and a store listing are saved to the same Nostr account on the relay(s); they use the same key. Publishing an ad does not require a store listing. Place notes sit on the Country row. Each connected coin node gets a silent-payment code, so a buyer can pay that chain. The buyer pay card uses the same code picture as a shop order, with the chain name in the center.
+
 Classifieds use their own node list. Kind 30402 is the classified. The stall and the products stay kinds 30017 and 30018. The nodes that receive an order are kind 10050. The private order is kind 1059. The order is a private note. The node that carries it cannot read it. If Shop or Classifieds comes back empty, check the node. If it allows every kind, leave it that way. If it only allows some kinds, allow 30402, 30017, 30018, 10050, and 1059.
 
 A price line reads Price in sats, then an approximate dollar amount, then now at market price. The word price opens the Neoxa market for BTCB2 and USDC:
@@ -66,7 +68,7 @@ Balance lists Open Shop Orders. Once the RouteHash account is saved, it also lis
 
 ## Install on Umbrel
 
-This page does not give you an umbrelOS file. umbrelOS 1.x and umbrelOS 2.0 use the same listing. It is version 0.1.8. A wallet from 0.1.7 stays. If the store still shows 0.1.7, remove this community store and add the same address again.
+This page does not give you an umbrelOS file. umbrelOS 1.x and umbrelOS 2.0 use the same listing. It is version 0.1.9. A wallet from 0.1.8 stays. If the store still shows 0.1.8, remove this community store and add the same address again.
 
 1. In Umbrel, open Settings, then App stores, then Add a community app store.
 2. Paste this address:
@@ -89,8 +91,8 @@ sha256sum -c SHA256SUMS
 
 | Program | SHA-256 |
 | --- | --- |
-| `bin/autarki-amd64` | `6d8ffd536a7314a30f13cde8a63c495f60e3931cd49f5af7d8be2acf3c5f567d` |
-| `bin/autarki-arm64` | `1280840bf00f9141cfb0793de2ad079a61c6c5c213bdea25ae80fc62ab86487f` |
+| `bin/autarki-amd64` | `b56a97b08ef263fe17d12b26aba53b0ed857c83c4680b2f8f2780f9839beeb47` |
+| `bin/autarki-arm64` | `f696bc94676efb61a04e1706f0b9a5373e703956a419ef7199f2de31b7ca9e87` |
 
 ## Which file to download
 
@@ -109,12 +111,12 @@ The same release also attaches `autarki_0.1.0_amd64.tar` and `autarki_0.1.0_arm6
 
 | File | Bytes | SHA-256 |
 | --- | ---: | --- |
-| `autarki_x86_64.s9pk` | 30568444 | `e060e9daad166254ce5c5edca1662b3123d2143e6f193630b2813918ec877a23` |
-| `autarki_aarch64.s9pk` | 29204479 | `be266c03209a9ca3be992459af953c690f45e36e1a7998d53dab44cb96b465f6` |
-| `autarki_0.1.0_amd64.tar` | 110509056 | `093c1eefe50c20436eb09128b2cc5ed8f6b759493953212c86771e967e77d00a` |
-| `autarki_0.1.0_arm64.tar` | 131350016 | `8c0bf8352b8e4c2c7747bde47186e4ec461621875a2850e7485679a58fa4d650` |
+| `autarki_x86_64.s9pk` | 30666967 | `97a736ec2e6ffb2edef07edd18e489a36deef05e2153f4925ef82acb0f710f97` |
+| `autarki_aarch64.s9pk` | 29233370 | `667d978526cf51ba36d0d2e5eb17eaa21fd0e945ff3c37cf3dc506bed05506f8` |
+| `autarki_0.1.0_amd64.tar` | 110722048 | `83ec166e549bdde6eee3139f6c970ca2830c52935f753c657a6ebfb5fb170ed0` |
+| `autarki_0.1.0_arm64.tar` | 131629568 | `a9046b2b61ebbdc5a861a000af5559101fccaa007f16d080646fdef8fd495492` |
 
-The package version inside each StartOS file is 0.1.0:6. Sideloading it replaces 0.1.0:5, and the wallet stays.
+The package version inside each StartOS file is 0.1.0:7. Sideloading it replaces 0.1.0:6, and the wallet stays.
 
 ## Check the download
 
