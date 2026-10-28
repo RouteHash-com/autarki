@@ -68,7 +68,7 @@ Balance lists Open Shop Orders. Once the RouteHash account is saved, it also lis
 
 ## Install on Umbrel
 
-This page does not give you an umbrelOS file. umbrelOS 1.x and umbrelOS 2.0 use the same listing. It is version 0.1.9. A wallet from 0.1.8 stays. If the store still shows 0.1.8, remove this community store and add the same address again.
+This page does not give you an umbrelOS file. umbrelOS 1.x and umbrelOS 2.0 use the same listing. It is version 0.1.10. A wallet from 0.1.9 stays. If the store still shows 0.1.9, remove this community store and add the same address again.
 
 1. In Umbrel, open Settings, then App stores, then Add a community app store.
 2. Paste this address:
@@ -91,8 +91,8 @@ sha256sum -c SHA256SUMS
 
 | Program | SHA-256 |
 | --- | --- |
-| `bin/autarki-amd64` | `b56a97b08ef263fe17d12b26aba53b0ed857c83c4680b2f8f2780f9839beeb47` |
-| `bin/autarki-arm64` | `f696bc94676efb61a04e1706f0b9a5373e703956a419ef7199f2de31b7ca9e87` |
+| `bin/autarki-amd64` | `c9e83a04d188d83fb409d5d99aa54814addb6a6fe4c0425c46c2b8f58b35a72c` |
+| `bin/autarki-arm64` | `a262bd50f810e0d2b999cf58c221210880cee6f7a867f98cf9ae4550bf626066` |
 
 ## Which file to download
 
@@ -111,12 +111,12 @@ The same release also attaches `autarki_0.1.0_amd64.tar` and `autarki_0.1.0_arm6
 
 | File | Bytes | SHA-256 |
 | --- | ---: | --- |
-| `autarki_x86_64.s9pk` | 30666967 | `97a736ec2e6ffb2edef07edd18e489a36deef05e2153f4925ef82acb0f710f97` |
-| `autarki_aarch64.s9pk` | 29233370 | `667d978526cf51ba36d0d2e5eb17eaa21fd0e945ff3c37cf3dc506bed05506f8` |
-| `autarki_0.1.0_amd64.tar` | 110722048 | `83ec166e549bdde6eee3139f6c970ca2830c52935f753c657a6ebfb5fb170ed0` |
-| `autarki_0.1.0_arm64.tar` | 131629568 | `a9046b2b61ebbdc5a861a000af5559101fccaa007f16d080646fdef8fd495492` |
+| `autarki_x86_64.s9pk` | 30667049 | `e2db0bfeee02bb73be67904486f6f8ac34e053157e44297e403ca411eae8fb84` |
+| `autarki_aarch64.s9pk` | 29237548 | `0fd0520711f40073371d16ffcabd290408ecc0d922b1d6b5f9c4c7b2dc0ecc86` |
+| `autarki_0.1.0_amd64.tar` | 110722048 | `22f2df9685a87ad9b52558b91899db78380ae2fc5eeb4cc3bb6cca36f33f0c15` |
+| `autarki_0.1.0_arm64.tar` | 131629568 | `79e362c8fef0aed5c8799a9903ee0fb593c0109ed241419e270d28ffc038fdd1` |
 
-The package version inside each StartOS file is 0.1.0:7. Sideloading it replaces 0.1.0:6, and the wallet stays.
+The package version inside each StartOS file is 0.1.0:8. Sideloading it replaces 0.1.0:7, and the wallet stays. Edit on a catalog product opens the form on that product and brings it into view.
 
 ## Check the download
 
