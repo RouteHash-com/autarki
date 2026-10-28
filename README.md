@@ -6,7 +6,7 @@
 
 No platform. Just the sale.
 
-Autarki is the wallet and the Nostr shop. It runs on an AMD or Intel server and on a Raspberry Pi. On StartOS, a Raspberry Pi uses `autarki_aarch64.s9pk`. On Umbrel, including Umbrel Home and a Raspberry Pi, install from the RouteHash community store. That listing installs on umbrelOS 1.x and on umbrelOS 2.0. This page has no umbrelOS file to download. A merchant builds the order on the page. Use it as an in-person point of sale, or set the shop to Online and take the order over Nostr. The same page hires a listed rig, and an online order can be shipped. The words, the shop book, and the sale stay on that server.
+Autarki is the wallet and the Nostr shop. It runs on an AMD or Intel server and on a Raspberry Pi. On StartOS, a Raspberry Pi uses `autarki_aarch64.s9pk`. On Umbrel, including Umbrel Home and a Raspberry Pi, install from the RouteHash community store. That listing installs on umbrelOS 1.x and on umbrelOS 2.0. This page has no umbrelOS file to download. A merchant builds the order on the page. Use it as an in-person point of sale, or set the shop to Online and take the order over Nostr. The same page hires a listed rig, posts a classified, and an online order can be shipped. The words, the shop book, and the sale stay on that server.
 
 Ordinary XBT and SHA-256d use Autarki's servers until you connect your own node under Settings, then Coin Nodes. XBTC uses Autarki's public node until you connect your own. The StartOS package and the Umbrel package do not include that node. A customer can pay at the counter or send the order from their own wallet.
 
@@ -16,7 +16,7 @@ Ordinary XBT and SHA-256d use Autarki's servers until you connect your own node 
 
 ## What you get
 
-One page: Shop, Receive, Send, Balance, Ledger, Store, Mining, and Settings. Mining stays hidden until you save a RouteHash account under Settings. Open Mining Invoices on Balance follows that same account.
+One page: Shop, Receive, Send, Balance, Ledger, Store, Mining, Classifieds, and Settings. Settings is the gear on the first row. Classifieds stays hidden until you turn on Enable Classifieds under Settings. Mining stays hidden until you save a RouteHash account under Settings. Open Mining Invoices on Balance follows that same account.
 
 The first screen creates the wallet. Write the 24 words on paper before you leave that screen. A password for this copy is optional. Leave it blank and the 24 words stay in the clear, so a backup of this server is then the seed. A native SegWit phrase can be imported on that same screen. After that import you can set a password, or leave the copy unlocked.
 
@@ -28,7 +28,7 @@ The three chains are ordinary XBT, SHA-256d, and XBTC. XBTC is the third chain. 
 
 On Receive, Send, Balance, and the till, the ordinary Bitcoin chip says BTC. Under Settings, then SHA-256 Lightning, the save button says Save BTC Lightning. Remove this node, under Settings, then Coin Nodes, hides that chain on those screens, on checkout, and on Check Outs. Use this node brings it back. The choice stays in this browser. A saved connection stays on this computer.
 
-Umbrel's Bitcoin app is Bitcoin Core. Autarki does not use it as the XBT node.
+On Umbrel you can run Knots for XBT, Knots for XBTC, or Bitcoin Core for SHA-256. XBT Knots and Bitcoin Core do not run on the same computer. XBTC Knots can run on the same computer as XBT Knots. This package does not treat Bitcoin Core as the XBT node. Blake2b Lightning is Lightning Fork, which PaulsCode made for XBT Knots. SHA-256 Lightning is LND, for Bitcoin Core. A giveaway, a personal, or a job you are hiring for can be posted with no coin node. A store catalog can be saved and announced too. Goods, a service, a rental, or a job offered for a price needs the XBT node or the Bitcoin node. One is enough. That ad can carry a payment code for each connected node. Buyers pay that shop on-chain after a coin node is connected and you publish the shop again.
 
 ## Ship an online order
 
@@ -37,6 +37,20 @@ An online shop asks Ship or Pick up before the order is sent. There is no defaul
 Each open order shows Ordered by and a short public name. On a customer wallet, Balance keeps See open orders and opens Shop. On the shop's wallet, an order that is still open opens Ledger, then Check Outs.
 
 The stall card shows the shop's short public name, the day the stall note was signed, and the payment codes. It shows how many shipments this wallet has marked received, and how many are still unfinished.
+
+## Classifieds
+
+Classifieds stays hidden until you turn on Enable Classifieds under Settings. A new wallet leaves it off. Turning it off hides the tab. A draft stays on this computer.
+
+The categories are Goods, Services, Jobs, Rentals, Giveaways, and Personals. Goods, a service, and a rental ask for a price. A job asks Offer or Hire. A giveaway and a personal do not ask for a price. An ad can carry up to four image addresses. A map link is an https address from OpenStreetMap, Google Maps, or Apple Maps. What is a map link? tells you to copy that address and paste it into Map. Use my location copies the shop's saved country, province or state, city, neighbourhood, and map link. It does not open that explanation.
+
+Classifieds use their own node list. Kind 30402 is the classified. The stall and the products stay kinds 30017 and 30018. The nodes that receive an order are kind 10050. The private order is kind 1059. The order is a private note. The node that carries it cannot read it. If Shop or Classifieds comes back empty, check the node. If it allows every kind, leave it that way. If it only allows some kinds, allow 30402, 30017, 30018, 10050, and 1059.
+
+A price line reads Price in sats, then an approximate dollar amount, then now at market price. The word price opens the Neoxa market for BTCB2 and USDC:
+
+https://neoxa.exchange/trade/BTCB2_USDC
+
+A name on a post or an order is the display name that person published, or their name when they published no display name. A click copies the public name. A missing profile leaves the short public name. That name is what they wrote. It is not a checked website name. Kind 0 is a profile. A whitelist that should show a name also allows kind 0.
 
 ## Hire a listed rig
 
@@ -52,7 +66,7 @@ Balance lists Open Shop Orders. Once the RouteHash account is saved, it also lis
 
 ## Install on Umbrel
 
-This page does not give you an umbrelOS file. umbrelOS 1.x and umbrelOS 2.0 use the same listing. It is version 0.1.6. A wallet from 0.1.5 stays. If the store still shows 0.1.5, remove this community store and add the same address again.
+This page does not give you an umbrelOS file. umbrelOS 1.x and umbrelOS 2.0 use the same listing. It is version 0.1.8. A wallet from 0.1.7 stays. If the store still shows 0.1.7, remove this community store and add the same address again.
 
 1. In Umbrel, open Settings, then App stores, then Add a community app store.
 2. Paste this address:
@@ -75,8 +89,8 @@ sha256sum -c SHA256SUMS
 
 | Program | SHA-256 |
 | --- | --- |
-| `bin/autarki-amd64` | `9bd4bf371fffa422ebcbbecce746cd1f47c9f685da2d5adf149bf9d242f483db` |
-| `bin/autarki-arm64` | `d1f00978207759b368c4ef153a734588d97ed8f50564f3484ded0ba7f1d9ff79` |
+| `bin/autarki-amd64` | `6d8ffd536a7314a30f13cde8a63c495f60e3931cd49f5af7d8be2acf3c5f567d` |
+| `bin/autarki-arm64` | `1280840bf00f9141cfb0793de2ad079a61c6c5c213bdea25ae80fc62ab86487f` |
 
 ## Which file to download
 
@@ -95,12 +109,12 @@ The same release also attaches `autarki_0.1.0_amd64.tar` and `autarki_0.1.0_arm6
 
 | File | Bytes | SHA-256 |
 | --- | ---: | --- |
-| `autarki_x86_64.s9pk` | 30489748 | `92ab4c8f099e8f29f6ea73682b1a57f8f19ae720cd4637ffbf99fcfc7a54f904` |
-| `autarki_aarch64.s9pk` | 29068439 | `92f3517a8b51133f3a3626ea2f938d94b6d6c924ee9ee6442975d66d7492aa05` |
-| `autarki_0.1.0_amd64.tar` | 109699072 | `67c314e8434e46d81025ecb4ac16074739e12b4e80ef1366e241222db5e1acb6` |
-| `autarki_0.1.0_arm64.tar` | 130574848 | `b4795d4b2b74ff5e4e15166c56c860f7634b7f1f2b8892bd1d127c10956cccb4` |
+| `autarki_x86_64.s9pk` | 30568444 | `e060e9daad166254ce5c5edca1662b3123d2143e6f193630b2813918ec877a23` |
+| `autarki_aarch64.s9pk` | 29204479 | `be266c03209a9ca3be992459af953c690f45e36e1a7998d53dab44cb96b465f6` |
+| `autarki_0.1.0_amd64.tar` | 110509056 | `093c1eefe50c20436eb09128b2cc5ed8f6b759493953212c86771e967e77d00a` |
+| `autarki_0.1.0_arm64.tar` | 131350016 | `8c0bf8352b8e4c2c7747bde47186e4ec461621875a2850e7485679a58fa4d650` |
 
-The package version inside each StartOS file is 0.1.0:4. Sideloading it replaces 0.1.0:3, and the wallet stays.
+The package version inside each StartOS file is 0.1.0:6. Sideloading it replaces 0.1.0:5, and the wallet stays.
 
 ## Check the download
 
