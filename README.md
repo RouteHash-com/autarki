@@ -36,7 +36,9 @@ An online shop asks Ship or Pick up before the order is sent. There is no defaul
 
 Each open order shows Ordered by and a short public name. On a customer wallet, Balance keeps See open orders and opens Shop. On the shop's wallet, an order that is still open opens Ledger, then Check Outs.
 
-The stall card shows the shop's short public name, the day the stall note was signed, and the payment codes. It shows how many shipments this wallet has marked received, and how many are still unfinished.
+The stall card shows the shop's short public name, the day the stall note was signed, and the payment codes. It shows how many shipments this wallet has marked received, and how many are still unfinished. After a completed shipment, the stall can show how many receipts both keys signed.
+
+Pick up on a classified offers Pay with XBT and Pay with BTC, with Lightning under the chain you press. Ship offers XBT Lightning and BTC Lightning. On-chain is not offered for a shipment. When this wallet is the seller, that Lightning payment request comes back on the click. The customer ledger names the order, the store, and the store owner. The coin download includes the product, the store, the date, and the charges on that order.
 
 ## Classifieds
 
@@ -44,9 +46,9 @@ Classifieds stays hidden until you turn on Enable Classifieds under Settings. A 
 
 The categories are Goods, Services, Jobs, Rentals, Giveaways, and Personals. Goods, a service, and a rental ask for a price. A job asks Offer or Hire. A giveaway and a personal do not ask for a price. An ad can carry up to four image addresses. A map link is an https address from OpenStreetMap, Google Maps, or Apple Maps. What is a map link? tells you to copy that address and paste it into Map. Use my location copies the shop's saved country, province or state, city, neighbourhood, and map link. It does not open that explanation.
 
-Search sits to the left of the keyword. Post and Check for orders are icons on the same row as Show Ignored and View blocked. Opening Post hides the ads. A classified ad and a store listing are saved to the same Nostr account on the relay(s); they use the same key. Publishing an ad does not require a store listing. Place notes sit on the Country row. Each connected coin node gets a silent-payment code, so a buyer can pay that chain. The buyer pay card uses the same code picture as a shop order, with the chain name in the center.
+Search sits to the left of the keyword. Post and Check for orders are icons on the same row as Show Ignored and View blocked. My Ads, beside Post, shows the ads saved on this computer. Opening Post hides the ads. Edit is on your own classified card. Cancel on the ad form leaves it without saving. Save and Publish return to the board when they succeed. One buyer and one listing stay one unpaid order. With the store off, a classified sale still shows on Check Outs until it is paid, and on Sales after that. A classified ad and a store listing are saved to the same Nostr account on the relay(s); they use the same key. A Discord username can be shown beside the shop. The shop and the classified stay public. The link is not required to buy or sell. Publishing an ad does not require a store listing. Place notes sit on the Country row. Each connected coin node gets a silent-payment code, so a buyer can pay that chain. The buyer pay card uses the same code picture as a shop order, with the chain name in the center.
 
-Classifieds use their own node list. Kind 30402 is the classified. The stall and the products stay kinds 30017 and 30018. The nodes that receive an order are kind 10050. The private order is kind 1059. The order is a private note. The node that carries it cannot read it. If Shop or Classifieds comes back empty, check the node. If it allows every kind, leave it that way. If it only allows some kinds, allow 30402, 30017, 30018, 10050, and 1059.
+Classifieds use their own node list. Kind 30402 is the classified. The stall and the products stay kinds 30017 and 30018. The nodes that receive an order are kind 10050. The private order is kind 1059. The order is a private note. The node that carries it cannot read it. If Shop or Classifieds comes back empty, check the node. If it allows every kind, leave it that way. If it only allows some kinds, allow 30402, 30017, 30018, 10050, and 1059. A whitelist that should check the receipt count also allows 38383 and 38384. A whitelist that should show the Discord link also allows 10011.
 
 A price line reads Price in sats, then an approximate dollar amount, then now at market price. The word price opens the Neoxa market for BTCB2 and USDC:
 
@@ -68,7 +70,7 @@ Balance lists Open Shop Orders. Once the RouteHash account is saved, it also lis
 
 ## Install on Umbrel
 
-This page does not give you an umbrelOS file. umbrelOS 1.x and umbrelOS 2.0 use the same listing. It is version 0.1.10. A wallet from 0.1.9 stays. If the store still shows 0.1.9, remove this community store and add the same address again.
+This page does not give you an umbrelOS file. umbrelOS 1.x and umbrelOS 2.0 use the same listing. It is version 0.1.11. A wallet from 0.1.10 stays. If the store still shows 0.1.10, remove this community store and add the same address again.
 
 1. In Umbrel, open Settings, then App stores, then Add a community app store.
 2. Paste this address:
@@ -91,8 +93,8 @@ sha256sum -c SHA256SUMS
 
 | Program | SHA-256 |
 | --- | --- |
-| `bin/autarki-amd64` | `c9e83a04d188d83fb409d5d99aa54814addb6a6fe4c0425c46c2b8f58b35a72c` |
-| `bin/autarki-arm64` | `a262bd50f810e0d2b999cf58c221210880cee6f7a867f98cf9ae4550bf626066` |
+| `bin/autarki-amd64` | `e8dba9a61f63f05d4f0a2eb8f576c4e148c7b8f1570448427073a54c57aaff34` |
+| `bin/autarki-arm64` | `46a8932d4071cccf04256b72649df839539d5b1f536d5a2802727a0740a08f4c` |
 
 ## Which file to download
 
@@ -111,13 +113,13 @@ The same release also attaches `autarki_0.1.0_amd64.tar` and `autarki_0.1.0_arm6
 
 | File | Bytes | SHA-256 |
 | --- | ---: | --- |
-| `autarki_x86_64.s9pk` | 30667049 | `e2db0bfeee02bb73be67904486f6f8ac34e053157e44297e403ca411eae8fb84` |
-| `autarki_aarch64.s9pk` | 29237548 | `0fd0520711f40073371d16ffcabd290408ecc0d922b1d6b5f9c4c7b2dc0ecc86` |
-| `autarki_0.1.0_amd64.tar` | 110722048 | `22f2df9685a87ad9b52558b91899db78380ae2fc5eeb4cc3bb6cca36f33f0c15` |
-| `autarki_0.1.0_arm64.tar` | 131629568 | `79e362c8fef0aed5c8799a9903ee0fb593c0109ed241419e270d28ffc038fdd1` |
-| `autarki_ubuntu_amd64.tar` | 110722048 | `b2cf869df80128e47c7d5cd46afbdcdf1e348510fa4b15c2043f4eef65353fb8` |
+| `autarki_x86_64.s9pk` | 30749190 | `d7157bcc04994a50d9afaf106f660582bf9dc8d562ed3ef8c4ae386dfd183d84` |
+| `autarki_aarch64.s9pk` | 29344265 | `8407e238c85f60075bf3a97a96af360666491f7df6a1bec035a31bd1f2889e7d` |
+| `autarki_0.1.0_amd64.tar` | 111319040 | `6d17ccfd704c0b5420a1f2110af4acdde6973cc2e37d0bcf32d25302e5098dec` |
+| `autarki_0.1.0_arm64.tar` | 132099584 | `e0e6f6b8f2f13225f60f86a46527ae95ef6bb99a9fbc007951982cd571ecd8ed` |
+| `autarki_ubuntu_amd64.tar` | 111319040 | `3b145a0e39f4704cc001267dac35d117a0ecc87f76b52af7b97309dfe9077e4b` |
 
-The package version inside each StartOS file is 0.1.0:8. Sideloading it replaces 0.1.0:7, and the wallet stays. Edit on a catalog product opens the form on that product and brings it into view.
+The package version inside each StartOS file is 0.1.0:9. Sideloading it replaces 0.1.0:8, and the wallet stays.
 
 ## Check the download
 
