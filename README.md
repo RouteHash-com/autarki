@@ -107,7 +107,7 @@ Download the StartOS package:
 
 https://github.com/RouteHash-com/autarki/releases/tag/0.1.0
 
-The same release also attaches `autarki_0.1.0_amd64.tar` and `autarki_0.1.0_arm64.tar`. Those are Docker images from this build. They are not an umbrelOS 2.0 install, and the community store does not use them. Sizes and checksums for every file on the release:
+The same release also attaches `autarki_0.1.0_amd64.tar` and `autarki_0.1.0_arm64.tar`. Those are Docker images from this build. They are not an umbrelOS 2.0 install, and the community store does not use them. An Ubuntu server uses `autarki_ubuntu_amd64.tar`. The steps are on the Ubuntu page. Sizes and checksums for every file on the release:
 
 | File | Bytes | SHA-256 |
 | --- | ---: | --- |
@@ -115,6 +115,7 @@ The same release also attaches `autarki_0.1.0_amd64.tar` and `autarki_0.1.0_arm6
 | `autarki_aarch64.s9pk` | 29237548 | `0fd0520711f40073371d16ffcabd290408ecc0d922b1d6b5f9c4c7b2dc0ecc86` |
 | `autarki_0.1.0_amd64.tar` | 110722048 | `22f2df9685a87ad9b52558b91899db78380ae2fc5eeb4cc3bb6cca36f33f0c15` |
 | `autarki_0.1.0_arm64.tar` | 131629568 | `79e362c8fef0aed5c8799a9903ee0fb593c0109ed241419e270d28ffc038fdd1` |
+| `autarki_ubuntu_amd64.tar` | 110722048 | `b2cf869df80128e47c7d5cd46afbdcdf1e348510fa4b15c2043f4eef65353fb8` |
 
 The package version inside each StartOS file is 0.1.0:8. Sideloading it replaces 0.1.0:7, and the wallet stays. Edit on a catalog product opens the form on that product and brings it into view.
 
@@ -127,6 +128,12 @@ sha256sum -c SHA256SUMS --ignore-missing
 ```
 
 The line for your file ends in `OK` when the download matches. A partial download does not.
+
+## Install on Ubuntu
+
+An Ubuntu server with Docker, and without StartOS or Umbrel, uses `autarki_ubuntu_amd64.tar` from the same release. The steps and the compose file are on the Ubuntu page:
+
+https://github.com/RouteHash-com/autarki/blob/main/ubuntu/README.md
 
 ## Install on StartOS
 
