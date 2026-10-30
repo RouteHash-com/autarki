@@ -6,7 +6,7 @@ The first screen creates the wallet. Write the 24 words on paper before you leav
 
 Ordinary XBT and SHA-256d use Autarki's servers until you connect your own node under Settings, then Coin Nodes. XBTC uses Autarki's public node until you connect your own. This image does not include that node.
 
-The page listens on port 4173.
+The page is on this computer only, at port 4173.
 
 ## Download
 
@@ -45,7 +45,13 @@ docker load -i autarki_ubuntu_amd64.tar
 docker compose up -d
 ```
 
-Open `http://this-server:4173`.
+Open `http://127.0.0.1:4173` on this computer. Compose uses the image id from this release and does not pull another image. The first start prepares `data` for the wallet. An existing `data` directory is kept.
+
+From another computer, open a tunnel, then open `http://127.0.0.1:4173` there:
+
+```
+ssh -L 4173:127.0.0.1:4173 user@this-server
+```
 
 The `data` directory beside the compose file is the wallet. Back that directory up. Do not send it to anyone.
 

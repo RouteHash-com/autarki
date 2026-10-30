@@ -1,9 +1,40 @@
 services:
-  autarki:
-    image: autarki:ubuntu
+  # One shot, as root, so ./data belongs to the wallet user. No network.
+  prepare:
+    image: sha256:9f12a935c7ac7e5c1f94e5af5082c8b38086037c777aaa9867714e2840e9a3f4
     pull_policy: never
+    user: "0:0"
+    network_mode: none
+    entrypoint: ["/bin/sh", "-c"]
+    command: ["mkdir -p /data && chown -R 1000:1000 /data"]
+    restart: "no"
+    read_only: true
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - DAC_OVERRIDE
+      - FOWNER
+    security_opt:
+      - no-new-privileges:true
+    volumes:
+      - ./data:/data
+  autarki:
+    image: sha256:9f12a935c7ac7e5c1f94e5af5082c8b38086037c777aaa9867714e2840e9a3f4
+    pull_policy: never
+    user: "1000:1000"
+    read_only: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /tmp
     restart: unless-stopped
+    depends_on:
+      prepare:
+        condition: service_completed_successfully
     ports:
-      - "4173:4173"
+      - "127.0.0.1:4173:4173"
     volumes:
       - ./data:/data
