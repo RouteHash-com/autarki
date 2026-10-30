@@ -6,7 +6,7 @@
 
 No platform. Just the sale.
 
-Autarki is a wallet, a shop, a classifieds board, and a way to hire a listed rig. Someone who has never heard of Bitcoin can open the page and look through shops before a wallet exists. The page says so: looking through the shops does not need one. Classifieds are on the same page after Enable Classifieds.
+Autarki is a wallet, a shop, a classifieds board, and a way to hire a listed rig. Someone who has never heard of Bitcoin can open the page and look through the shops before a wallet exists. Looking through the shops does not need one. Classifieds are on the same page after Enable Classifieds.
 
 Run it on:
 
