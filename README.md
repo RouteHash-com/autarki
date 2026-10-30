@@ -18,7 +18,9 @@ Ordinary XBT and SHA-256d use Autarki's servers until you connect your own node 
 
 One page: Shop, Receive, Send, Balance, Ledger, Store, Mining, Classifieds, and Settings. Settings is the gear on the first row. Classifieds stays hidden until you turn on Enable Classifieds under Settings. Mining stays hidden until you save a RouteHash account under Settings. Open Mining Invoices on Balance follows that same account.
 
-The first screen creates the wallet. Write the 24 words on paper before you leave that screen. A password for this copy is optional. Leave it blank and the 24 words stay in the clear, so a backup of this server is then the seed. A native SegWit phrase can be imported on that same screen. After that import you can set a password, or leave the copy unlocked.
+The first screen creates the wallet. Write the 24 words on paper before you leave that screen. A password for this copy is optional. Leave both password fields blank and the 24 words are stored unencrypted on this device. A backup of this service is then the seed. Restore the 24 words is on that same screen. It shows the first XBT address and does not show the words again. A shorter phrase uses Import a BIP39 phrase. A native SegWit phrase can be imported on that same screen. After that import you can set a password, or leave the copy unlocked.
+
+Settings, then Nostr Node, then A copy of the shop, saves the catalog, the orders, the coin journal, and the classifieds to a file on this computer or a drive. Bring a copy back replaces that book. The file leaves out the 24 words, the wallet file, a secret key, a macaroon, and a node password. The Lightning channel stays on the Lightning node. The stall, each product, and each classified are already notes on the Nostr node. Anyone can read those notes. This wallet does not send the shop book to that shared node. A shop that runs its own Nostr node keeps those public notes on that machine. Autarki's node is the shared board until then.
 
 The shop opens as a point of sale. A guest at the counter uses Pay Counter, and the clerk ticket shows the last four characters of the order. Set the shop to Online when the sale is not at the counter. Online hides Pay Counter and that ticket. Publish announces the choice. Until you publish, customers still see the counter.
 
@@ -70,7 +72,7 @@ Balance lists Open Shop Orders. Once the RouteHash account is saved, it also lis
 
 ## Install on Umbrel
 
-This page does not give you an umbrelOS file. umbrelOS 1.x and umbrelOS 2.0 use the same listing. It is version 0.1.11. A wallet from 0.1.10 stays. If the store still shows 0.1.10, remove this community store and add the same address again.
+This page does not give you an umbrelOS file. umbrelOS 1.x and umbrelOS 2.0 use the same listing. It is version 0.1.12. A wallet from 0.1.11 stays. If the store still shows 0.1.11, remove this community store and add the same address again.
 
 1. In Umbrel, open Settings, then App stores, then Add a community app store.
 2. Paste this address:
@@ -93,8 +95,8 @@ sha256sum -c SHA256SUMS
 
 | Program | SHA-256 |
 | --- | --- |
-| `bin/autarki-amd64` | `e8dba9a61f63f05d4f0a2eb8f576c4e148c7b8f1570448427073a54c57aaff34` |
-| `bin/autarki-arm64` | `46a8932d4071cccf04256b72649df839539d5b1f536d5a2802727a0740a08f4c` |
+| `bin/autarki-amd64` | `b72e326e5610b66be4a0e76f19647b36ad02e39fd80c404fde09c2c64b574a04` |
+| `bin/autarki-arm64` | `4a2cf899cda76f1c1a5145a5dc0338173b725917d3237e1f139deccdf696d751` |
 
 ## Which file to download
 
@@ -113,13 +115,13 @@ The same release also attaches `autarki_0.1.0_amd64.tar` and `autarki_0.1.0_arm6
 
 | File | Bytes | SHA-256 |
 | --- | ---: | --- |
-| `autarki_x86_64.s9pk` | 30749190 | `d7157bcc04994a50d9afaf106f660582bf9dc8d562ed3ef8c4ae386dfd183d84` |
-| `autarki_aarch64.s9pk` | 29344265 | `8407e238c85f60075bf3a97a96af360666491f7df6a1bec035a31bd1f2889e7d` |
-| `autarki_0.1.0_amd64.tar` | 111319040 | `6d17ccfd704c0b5420a1f2110af4acdde6973cc2e37d0bcf32d25302e5098dec` |
-| `autarki_0.1.0_arm64.tar` | 132099584 | `e0e6f6b8f2f13225f60f86a46527ae95ef6bb99a9fbc007951982cd571ecd8ed` |
-| `autarki_ubuntu_amd64.tar` | 111319040 | `3b145a0e39f4704cc001267dac35d117a0ecc87f76b52af7b97309dfe9077e4b` |
+| `autarki_x86_64.s9pk` | 30724450 | `5e3e527870212841a2ef128e271ee42d5e00e9c469d3f17113093a584135a823` |
+| `autarki_aarch64.s9pk` | 29360485 | `d246a33d005f0b4226472a8fcb18b54056906245a0f4e23b0a22b5dd42057fd2` |
+| `autarki_0.1.0_amd64.tar` | 111381504 | `d9f65f34e4b7501265d056f7f6bcdcbec8757507795fce65ac174c6111bc6d7a` |
+| `autarki_0.1.0_arm64.tar` | 132101632 | `1d5e1f3839fb272873ebcfac406779c0fb9a84dd50b69db4e8f9cae08f0ac203` |
+| `autarki_ubuntu_amd64.tar` | 111381504 | `8f46dfc55179effbb5b7f72df1198be07eb726dd1ddf1239d5cc3a9c5aed4bc3` |
 
-The package version inside each StartOS file is 0.1.0:9. Sideloading it replaces 0.1.0:8, and the wallet stays.
+The package version inside each StartOS file is 0.1.0:10. Sideloading it replaces 0.1.0:9, and the wallet stays.
 
 ## Check the download
 

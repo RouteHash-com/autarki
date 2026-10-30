@@ -2,7 +2,7 @@
 
 An Ubuntu server with Docker, and without StartOS or Umbrel, runs this image. It is the same wallet as the StartOS package for an AMD or Intel server. A Raspberry Pi does not use this file.
 
-The first screen creates the wallet. Write the 24 words on paper before you leave that screen. A blank password stores those words in the clear, and a copy of the data directory is then the seed.
+The first screen creates the wallet. Write the 24 words on paper before you leave that screen. Leave both password fields blank and the 24 words are stored unencrypted on this device. A backup of this service is then the seed. Restore the 24 words is on that screen. Settings, then Nostr Node, can save a copy of the shop book. That file does not hold the 24 words.
 
 Ordinary XBT and SHA-256d use Autarki's servers until you connect your own node under Settings, then Coin Nodes. XBTC uses Autarki's public node until you connect your own. This image does not include that node.
 
@@ -34,7 +34,7 @@ The line for `autarki_ubuntu_amd64.tar` ends in `OK` when the download matches.
 
 | File | Bytes | SHA-256 |
 | --- | ---: | --- |
-| `autarki_ubuntu_amd64.tar` | 111319040 | `3b145a0e39f4704cc001267dac35d117a0ecc87f76b52af7b97309dfe9077e4b` |
+| `autarki_ubuntu_amd64.tar` | 111381504 | `8f46dfc55179effbb5b7f72df1198be07eb726dd1ddf1239d5cc3a9c5aed4bc3` |
 
 ## Start
 
