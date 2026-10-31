@@ -10,7 +10,7 @@ Autarki is a wallet, a shop, a classifieds board, and a way to hire a listed rig
 
 Run it on:
 
-- **StartOS**, on an AMD or Intel server (`autarki_x86_64.s9pk`) or a Raspberry Pi (`autarki_aarch64.s9pk`). The package inside is 0.1.0:11. The release tag stays 0.1.0.
+- **StartOS**, on an AMD or Intel server (`autarki_x86_64.s9pk`) or a Raspberry Pi (`autarki_aarch64.s9pk`). The package inside is 0.1.0:12. The release tag stays 0.1.0.
 - **Umbrel**, including Umbrel Home and a Raspberry Pi, on umbrelOS 1.x and on umbrelOS 2.0. Install from the RouteHash community store. This page has no umbrelOS file.
 - **Ubuntu server** with Docker (`autarki_ubuntu_amd64.tar`). The steps are on the [Ubuntu page](https://github.com/RouteHash-com/autarki/blob/main/ubuntu/README.md).
 - **Docker images** `autarki_0.1.0_amd64.tar` and `autarki_0.1.0_arm64.tar`. Those images are from this build. They are not an umbrelOS install.
@@ -23,7 +23,7 @@ The words, the shop book, and the sale stay on that server.
 
 ## What you get
 
-One page: Shop, Receive, Send, Balance, Ledger, Store, Mining, Classifieds, and Settings. Settings is the gear on the first row. Classifieds stays hidden until you turn on Enable Classifieds under Settings. Mining stays hidden until you save a RouteHash account under Settings. Open Mining Invoices on Balance follows that same account.
+One page: Shop, Receive, Send, Balance, Ledger, Store, Mining, Classifieds, and Settings. Settings is the gear on the first row. Classifieds stays hidden until you turn on Enable Classifieds under Settings. The Mining tab is on this page once this wallet is open. Paste the API token on Mining, or under Settings. Before that account is saved, Balance says to hire a rig, and the rewards come back to this wallet. After it is saved, Balance lists Open Mining Invoices.
 
 **Look before a wallet exists.** The shop opens first. Search on Shop is a shop, a product, or a place. Read the products. A first purchase does not have to be a coin. Classifieds open on this page after Enable Classifieds.
 
@@ -37,7 +37,7 @@ One page: Shop, Receive, Send, Balance, Ledger, Store, Mining, Classifieds, and 
 
 **Classifieds.** Goods, Services, Jobs, Rentals, Giveaways, and Personals. The detail is below.
 
-**Mining.** Hire a listed Blake2b rig with XBT, or a listed SHA-256 rig with BTC, after the RouteHash account is saved. The detail is below.
+**Mining.** The Mining tab is on this page once this wallet is open. Hire a listed Blake2b rig with XBT, or a listed SHA-256 rig with BTC. The detail is below.
 
 **Nostr.** This is what keeps the sale off a platform. A shop is found, and an order arrives, without a website of your own. The stall, each product, and each classified are public notes. Anyone can read those notes. The order is a private note. The node that carries it cannot read it. A shop that runs its own Nostr node keeps those public notes on that machine. Autarki's node is the shared board until then. This wallet does not send the shop book to that shared node. Autarki's node does not charge to post.
 
@@ -81,7 +81,7 @@ A name on a post or an order is the display name that person published, or their
 
 ## Hire a listed rig
 
-Save a RouteHash account under Settings. The account is the one on https://routehash.com. That account unlocks Mining. Hire a listed Blake2b rig with XBT, or a listed SHA-256 rig with BTC.
+Open a RouteHash account at https://routehash.com. Paste that account's API token on Mining, or under Settings. That account shows the Mine cards. Hire a listed Blake2b rig with XBT, or a listed SHA-256 rig with BTC.
 
 Mine writes a Lightning invoice for accepted shares and waits until you click Pay. Paying it starts that rig only. The button says Pay to start on the first invoice, and Pay to keep on a later invoice for a rig that is already hashing. Add Hash puts another rig on the same card. Blake2b is one card. SHA-256 is the other card.
 
@@ -89,11 +89,11 @@ Hours from balance uses the confirmed balance on that account for the rig's mini
 
 The card shows the work still paid for. The countdown starts when the rig is hashing. Before payment the card shows the time you bought. The payout address is on the card while a hire is running or waiting for payment. You can remove a hire that is still waiting, or stop one that is hashing.
 
-Balance lists Open Shop Orders. Once the RouteHash account is saved, it also lists Open Mining Invoices for a hire that is running or waiting for payment.
+Balance lists Open Shop Orders. Before the RouteHash account is saved, it says to hire a rig, and the rewards come back to this wallet. Once that account is saved, it lists Open Mining Invoices for a hire that is running or waiting for payment.
 
 ## Install on Umbrel
 
-This page does not give you an umbrelOS file. umbrelOS 1.x and umbrelOS 2.0 use the same listing. It is version 0.1.13. A wallet from 0.1.12 stays. If the store still shows 0.1.12, remove this community store and add the same address again.
+This page does not give you an umbrelOS file. umbrelOS 1.x and umbrelOS 2.0 use the same listing. It is version 0.1.14. A wallet from 0.1.13 stays. If the store still shows 0.1.13, remove this community store and add the same address again.
 
 1. In Umbrel, open Settings, then App stores, then Add a community app store.
 2. Paste this address:
@@ -116,8 +116,8 @@ sha256sum -c SHA256SUMS
 
 | Program | SHA-256 |
 | --- | --- |
-| `bin/autarki-amd64` | `1de0cee4e60048a54f6b620f727577d74231899b17dc5366e61995296267c1ed` |
-| `bin/autarki-arm64` | `0085d77e525d572f3b95f745edc9b0e173233aaf6966311f21c236062a389953` |
+| `bin/autarki-amd64` | `72adccdd831edd981bb4488ff963536d308cfc4bd987e77c1751b62406be828b` |
+| `bin/autarki-arm64` | `ebb05ef96f081aeabc7c2f585722b394a37a7fe86d10790df143f281d3ca7602` |
 
 ## Which file to download
 
@@ -136,13 +136,13 @@ The same release also attaches `autarki_0.1.0_amd64.tar` and `autarki_0.1.0_arm6
 
 | File | Bytes | SHA-256 |
 | --- | ---: | --- |
-| `autarki_x86_64.s9pk` | 30797913 | `bc9f3c6539ed4db2b2fa13d78cd86c3cf198969929803d4d07b0232c789808a3` |
-| `autarki_aarch64.s9pk` | 29323356 | `fdae84f7d901a18bf90aa9ddcae76be1103b29ae05333f364e43f689a66b692d` |
-| `autarki_0.1.0_amd64.tar` | 111485952 | `39d742f626edba488c04d52fe0e6f1ffc3c580f7ef98d615927a9bcd0a64ff8c` |
-| `autarki_0.1.0_arm64.tar` | 132244992 | `6af50ac249062b4f0ee6581643c088b3b72dc4b1c7a87d2a0f135cd2019ef162` |
-| `autarki_ubuntu_amd64.tar` | 111485952 | `ecf442f2b46be6f6bcbd5c03df17cb9e6260e9eddb965d56705952f8495e30b5` |
+| `autarki_x86_64.s9pk` | 30801903 | `1dcbaa9455e1a66d2b6ee97e43defe849ad526d986c4f2ca4e5828da23290e1f` |
+| `autarki_aarch64.s9pk` | 29323250 | `317333fe78980afa0e16067d02a1535a047d7bf146367c47e7b061b43f4b0f71` |
+| `autarki_0.1.0_amd64.tar` | 111494144 | `772f33078e648d19b0566687d68c3a8e85973e44d0532afd51c9bda0e671856e` |
+| `autarki_0.1.0_arm64.tar` | 132246016 | `4dc5c08c2e0328d1b4d9da10373dab3b647fb8c03cd36d73261ebab404e73956` |
+| `autarki_ubuntu_amd64.tar` | 111494144 | `9818ad619872f60a39f8b2e37c786b41731a491985a6fede42de2db0b75d70a8` |
 
-The package version inside each StartOS file is 0.1.0:11. Sideloading it replaces 0.1.0:10, and the wallet stays.
+The package version inside each StartOS file is 0.1.0:12. Sideloading it replaces 0.1.0:11, and the wallet stays.
 
 ## Check the download
 
