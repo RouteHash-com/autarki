@@ -10,7 +10,7 @@ Autarki is a wallet, a shop, a classifieds board, and a way to hire a listed rig
 
 Run it on:
 
-- **StartOS**, on an AMD or Intel server (`autarki_x86_64.s9pk`) or a Raspberry Pi (`autarki_aarch64.s9pk`). The package inside is 0.1.0:10. The release tag stays 0.1.0.
+- **StartOS**, on an AMD or Intel server (`autarki_x86_64.s9pk`) or a Raspberry Pi (`autarki_aarch64.s9pk`). The package inside is 0.1.0:11. The release tag stays 0.1.0.
 - **Umbrel**, including Umbrel Home and a Raspberry Pi, on umbrelOS 1.x and on umbrelOS 2.0. Install from the RouteHash community store. This page has no umbrelOS file.
 - **Ubuntu server** with Docker (`autarki_ubuntu_amd64.tar`). The steps are on the [Ubuntu page](https://github.com/RouteHash-com/autarki/blob/main/ubuntu/README.md).
 - **Docker images** `autarki_0.1.0_amd64.tar` and `autarki_0.1.0_arm64.tar`. Those images are from this build. They are not an umbrelOS install.
@@ -29,7 +29,7 @@ One page: Shop, Receive, Send, Balance, Ledger, Store, Mining, Classifieds, and 
 
 **Prices.** A price is whole satoshis. A US dollar or Canadian dollar figure sits beside it as a hint, so the number is familiar. The amount due stays in sats. Each wallet chooses US dollars or Canadian dollars under Settings, then Coin Nodes, and again under Store, then Taxes. Switching the hint changes the dollar figure. It does not change the sats.
 
-**Wallet.** Receive, send, and a balance for ordinary XBT, for SHA-256d Bitcoin, and for XBTC. XBTC is the third chain. A shop checkout asks for XBT or BTC. It does not ask for XBTC. Ordinary XBT and SHA-256d use Autarki's servers until you connect your own node under Settings, then Coin Nodes. XBTC uses Autarki's public node until you connect your own. The StartOS package and the Umbrel package do not include that node. A silent-payment code for an address of yours is used only after that node is connected. Until then the page gives a normal address. A code you type on Send uses your own node.
+**Wallet.** Receive, send, and a balance for ordinary XBT, for SHA-256d Bitcoin, and for XBTC. XBTC is the third chain. A shop checkout asks for XBT, BTC, or XBTC. Pay with XBTC is there when the XBTC node on this wallet is active and the shop published an XBTC account. Pay with XBT and Pay with BTC stay. A shipment does not offer XBTC. XBT and BTC can use Lightning. XBTC does not. Ordinary XBT and SHA-256d use Autarki's servers until you connect your own node under Settings, then Coin Nodes. XBTC uses Autarki's public node until you connect your own. The StartOS package and the Umbrel package do not include that node. A silent-payment code for an address of yours is used only after that node is connected. Until then the page gives a normal address. A code you type on Send uses your own node.
 
 **Shop.** A merchant builds the order on the page. Use it as an in-person point of sale, or set the shop to Online and take the order over Nostr. An online order can be shipped.
 
@@ -61,7 +61,7 @@ Each open order shows Ordered by and a short public name. On a customer wallet, 
 
 The stall card shows the shop's short public name, the day the stall note was signed, and the payment codes. It shows how many shipments this wallet has marked received, and how many are still unfinished. After a completed shipment, the stall can show how many receipts both keys signed.
 
-Pick up on a classified offers Pay with XBT and Pay with BTC, with Lightning under the chain you press. Ship offers XBT Lightning and BTC Lightning. On-chain is not offered for a shipment. When this wallet is the seller, that Lightning payment request comes back on the click. The customer ledger names the order, the store, and the store owner. The coin download includes the product, the store, the date, and the charges on that order.
+Pick up on a classified offers Pay with XBT, Pay with BTC, and Pay with XBTC. Lightning sits under XBT and under BTC. Pay with XBTC is there when the XBTC node on this wallet is active and the ad published an XBTC account. It has no Lightning button. Ship offers XBT Lightning and BTC Lightning. On-chain is not offered for a shipment, and a shipment does not offer XBTC. When this wallet is the seller, that Lightning payment request comes back on the click. The customer ledger names the order, the store, and the store owner. The coin download includes the product, the store, the date, and the charges on that order.
 
 ## Classifieds
 
@@ -93,7 +93,7 @@ Balance lists Open Shop Orders. Once the RouteHash account is saved, it also lis
 
 ## Install on Umbrel
 
-This page does not give you an umbrelOS file. umbrelOS 1.x and umbrelOS 2.0 use the same listing. It is version 0.1.12. A wallet from 0.1.11 stays. If the store still shows 0.1.11, remove this community store and add the same address again.
+This page does not give you an umbrelOS file. umbrelOS 1.x and umbrelOS 2.0 use the same listing. It is version 0.1.13. A wallet from 0.1.12 stays. If the store still shows 0.1.12, remove this community store and add the same address again.
 
 1. In Umbrel, open Settings, then App stores, then Add a community app store.
 2. Paste this address:
@@ -116,8 +116,8 @@ sha256sum -c SHA256SUMS
 
 | Program | SHA-256 |
 | --- | --- |
-| `bin/autarki-amd64` | `b72e326e5610b66be4a0e76f19647b36ad02e39fd80c404fde09c2c64b574a04` |
-| `bin/autarki-arm64` | `4a2cf899cda76f1c1a5145a5dc0338173b725917d3237e1f139deccdf696d751` |
+| `bin/autarki-amd64` | `1de0cee4e60048a54f6b620f727577d74231899b17dc5366e61995296267c1ed` |
+| `bin/autarki-arm64` | `0085d77e525d572f3b95f745edc9b0e173233aaf6966311f21c236062a389953` |
 
 ## Which file to download
 
@@ -136,13 +136,13 @@ The same release also attaches `autarki_0.1.0_amd64.tar` and `autarki_0.1.0_arm6
 
 | File | Bytes | SHA-256 |
 | --- | ---: | --- |
-| `autarki_x86_64.s9pk` | 30724450 | `5e3e527870212841a2ef128e271ee42d5e00e9c469d3f17113093a584135a823` |
-| `autarki_aarch64.s9pk` | 29360485 | `d246a33d005f0b4226472a8fcb18b54056906245a0f4e23b0a22b5dd42057fd2` |
-| `autarki_0.1.0_amd64.tar` | 111381504 | `d9f65f34e4b7501265d056f7f6bcdcbec8757507795fce65ac174c6111bc6d7a` |
-| `autarki_0.1.0_arm64.tar` | 132101632 | `1d5e1f3839fb272873ebcfac406779c0fb9a84dd50b69db4e8f9cae08f0ac203` |
-| `autarki_ubuntu_amd64.tar` | 111381504 | `8f46dfc55179effbb5b7f72df1198be07eb726dd1ddf1239d5cc3a9c5aed4bc3` |
+| `autarki_x86_64.s9pk` | 30797913 | `bc9f3c6539ed4db2b2fa13d78cd86c3cf198969929803d4d07b0232c789808a3` |
+| `autarki_aarch64.s9pk` | 29323356 | `fdae84f7d901a18bf90aa9ddcae76be1103b29ae05333f364e43f689a66b692d` |
+| `autarki_0.1.0_amd64.tar` | 111485952 | `39d742f626edba488c04d52fe0e6f1ffc3c580f7ef98d615927a9bcd0a64ff8c` |
+| `autarki_0.1.0_arm64.tar` | 132244992 | `6af50ac249062b4f0ee6581643c088b3b72dc4b1c7a87d2a0f135cd2019ef162` |
+| `autarki_ubuntu_amd64.tar` | 111485952 | `ecf442f2b46be6f6bcbd5c03df17cb9e6260e9eddb965d56705952f8495e30b5` |
 
-The package version inside each StartOS file is 0.1.0:10. Sideloading it replaces 0.1.0:9, and the wallet stays.
+The package version inside each StartOS file is 0.1.0:11. Sideloading it replaces 0.1.0:10, and the wallet stays.
 
 ## Check the download
 
