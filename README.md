@@ -31,7 +31,7 @@ One page: Shop, Receive, Send, Balance, Ledger, Store, Mining, Classifieds, and 
 
 **Wallet.** Receive, send, and a balance for ordinary XBT, for SHA-256d Bitcoin, and for XBTC. XBTC is the third chain. A shop checkout asks for XBT, BTC, or XBTC. Pay with XBTC is there when the XBTC node on this wallet is active and the shop published an XBTC account. Pay with XBT and Pay with BTC stay. A shipment does not offer XBTC. XBT and BTC can use Lightning. XBTC does not. Ordinary XBT and SHA-256d use Autarki's servers until you connect your own node under Settings, then Coin Nodes. XBTC uses Autarki's public node until you connect your own. The StartOS package and the Umbrel package do not include that node. A silent-payment code for an address of yours is used only after that node is connected. Until then the page gives a normal address. A code you type on Send uses your own node.
 
-**Shop.** A merchant builds the order on the page. Use it as an in-person point of sale, or set the shop to Online and take the order over Nostr. An online order can be shipped.
+**Shop.** A merchant builds the order on the page. Use it as an in-person point of sale, or set the shop to Online and take the order over Nostr. An online order can be shipped. The coins wait with the parcel until the buyer marks it received.
 
 **Pay Counter.** On a shop at the counter, Pay Counter is where the clerk records the sale: cash, a debit card, a credit card, a coupon, store credit, bitcoin, or a mix. The page does not charge the card. The clerk records that. The clerk ticket shows the last four characters of the order. Set the shop to Online when the sale is not at the counter. Online hides Pay Counter and that ticket. Publish announces the choice. Until you publish, customers still see the counter.
 
@@ -55,7 +55,17 @@ On Umbrel you can run Knots for XBT, Knots for XBTC, or Bitcoin Core for SHA-256
 
 ## Ship an online order
 
-An online shop asks Ship or Pick up before the order is sent. There is no default. Pick up pays the shop directly, the same as a counter sale. A shipment pays with Lightning. The shop marks it shipped. The customer marks it received. The shop's node holds the coins until the customer marks the order received. Tracking is a note on the order. If the customer does not mark it received, the hold ends and the coins return to the customer. The shop's node has to stay on for that window.
+You can buy from someone you have never met, and they can ship to you, without a platform holding the money. You pay with Lightning. The coins sit on the seller's node. The seller sends the parcel knowing that money is there. You mark it received when it is in your hands, and the seller is paid.
+
+An online shop asks Ship or Pick up before the order is sent. There is no default. Pick up pays the shop directly, the same as a counter sale. A classified seller can offer Ship with no store. On that board the word is seller. On a shop order the word is shop. The hold is the same. On-chain is not offered for a shipment.
+
+Before the seller marks it shipped, Cancel is still open. Nothing has been handed to the shipper. The seller is told, the order closes, and the coins go back to you.
+
+Cancel is closed once it has shipped. You see Shipped, the carrier, the tracking number, and a link to the shipper's tracking page. Mark received pays the seller. Not received stops both automatic moves. The coins stay held until you mark it received, or until the Lightning window ends and the coins come back to you.
+
+The seller names how many days they have to ship, up to four, and whether the hold is 14 days at home or 28 days overseas. The clock starts when the payment is accepted. If they have not marked it shipped, with a carrier and a tracking number, by that ship-by day, the coins go back to you. If they did ship it and you do nothing, the seller is paid when the hold ends.
+
+Check the carrier asks the shipper's tracking service and saves that scan as words on the order. Canada Post, UPS, FedEx, and DHL are the names it can look up. The scan does not move the coins. The seller's wallet and Lightning node stay on through the window. If this wallet never acts, the Lightning window still sends the coins back to you.
 
 Each open order shows Ordered by and a short public name. On a customer wallet, Balance keeps See open orders and opens Shop. On the shop's wallet, an order that is still open opens Ledger, then Check Outs.
 
