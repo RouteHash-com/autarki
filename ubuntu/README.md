@@ -4,7 +4,9 @@ An Ubuntu server with Docker, and without StartOS or Umbrel, runs this image. It
 
 The first screen creates the wallet. Write the 24 words on paper before you leave that screen. Leave both password fields blank and the 24 words are stored unencrypted on this device. A backup of this service is then the seed. Restore the 24 words is on that screen. Settings, then Nostr Node, can save a copy of the shop book. That file does not hold the 24 words.
 
-Ordinary XBT and SHA-256d use Autarki's servers until you connect your own node under Settings, then Coin Nodes. XBTC uses Autarki's public node until you connect your own. This image does not include that node.
+This image starts its own Lightning node for Blake2b XBT bitcoin and its own Lightning node for SHA-256 BTC bitcoin. You do not install a separate Lightning app. A purchase opens a channel when the payment needs one. Nostr is how a shop is found. The stall is a public note. The order is a private note.
+
+Blake2b XBT bitcoin and SHA-256 BTC bitcoin use Autarki's servers until you connect your own node under Settings, then Coin Nodes. XBTC uses Autarki's public node until you connect your own. This image does not include that node.
 
 The page is on this computer only, at port 4173.
 

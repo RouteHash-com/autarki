@@ -8,9 +8,11 @@ No platform. Just the sale.
 
 Autarki is a wallet, a shop, a classifieds board, and a way to hire a listed rig. Someone who has never heard of Bitcoin can open the page and look through the shops before a wallet exists. Looking through the shops does not need one. Classifieds are on the same page after Enable Classifieds.
 
+This wallet starts its own Lightning node for Blake2b XBT bitcoin and its own Lightning node for SHA-256 BTC bitcoin. You do not install a separate Lightning app. A purchase opens a channel when the payment needs one. Nostr is how a shop is found, and how an order arrives, without a website of your own. The stall, each product, and each classified are public notes. Anyone can read them. The order is a private note. The node that carries it cannot read it.
+
 Run it on:
 
-- **StartOS**, on an AMD or Intel server (`autarki_x86_64.s9pk`) or a Raspberry Pi (`autarki_aarch64.s9pk`). The package inside is 0.1.0:12. The release tag stays 0.1.0.
+- **StartOS**, on an AMD or Intel server (`autarki_x86_64.s9pk`) or a Raspberry Pi (`autarki_aarch64.s9pk`). The package inside the files on release 0.1.0 is 0.1.0:12. The release tag stays 0.1.0. The pictures below are the current wallet.
 - **Umbrel**, including Umbrel Home and a Raspberry Pi, on umbrelOS 1.x and on umbrelOS 2.0. Install from the RouteHash community store. This page has no umbrelOS file.
 - **Ubuntu server** with Docker (`autarki_ubuntu_amd64.tar`). The steps are on the [Ubuntu page](https://github.com/RouteHash-com/autarki/blob/main/ubuntu/README.md).
 - **Docker images** `autarki_0.1.0_amd64.tar` and `autarki_0.1.0_arm64.tar`. Those images are from this build. They are not an umbrelOS install.
@@ -21,6 +23,18 @@ The words, the shop book, and the sale stay on that server.
   <img src="shop.png" alt="Autarki shop page for Sunrise Coffee Shop, with one bagel on the order and the Check-Out button" width="440">
 </p>
 
+<p align="center">
+  <img src="lightning-blake2b.png" alt="Blake2b Lightning card. This wallet starts its own Blake2b XBT bitcoin Lightning node. A purchase opens a channel when the payment needs one." width="440">
+</p>
+
+<p align="center">
+  <img src="lightning-sha256.png" alt="SHA-256 Lightning card. This wallet starts its own SHA-256 BTC bitcoin Lightning node." width="440">
+</p>
+
+<p align="center">
+  <img src="nostr-shop.png" alt="Store, then Nostr. The shop is a public note. The order stays private." width="440">
+</p>
+
 ## What you get
 
 One page: Shop, Receive, Send, Balance, Ledger, Store, Mining, Classifieds, and Settings. Settings is the gear on the first row. Classifieds stays hidden until you turn on Enable Classifieds under Settings. The Mining tab is on this page once this wallet is open. Paste the API token on Mining, or under Settings. Before that account is saved, Balance says to hire a rig, and the rewards come back to this wallet. After it is saved, Balance lists Open Mining Invoices.
@@ -29,7 +43,7 @@ One page: Shop, Receive, Send, Balance, Ledger, Store, Mining, Classifieds, and 
 
 **Prices.** A price is whole satoshis. A US dollar or Canadian dollar figure sits beside it as a hint, so the number is familiar. The amount due stays in sats. Each wallet chooses US dollars or Canadian dollars under Settings, then Coin Nodes, and again under Store, then Taxes. Switching the hint changes the dollar figure. It does not change the sats.
 
-**Wallet.** Receive, send, and a balance for ordinary XBT, for SHA-256d Bitcoin, and for XBTC. XBTC is the third chain. A shop checkout asks for XBT, BTC, or XBTC. Pay with XBTC is there when the XBTC node on this wallet is active and the shop published an XBTC account. Pay with XBT and Pay with BTC stay. A shipment does not offer XBTC. XBT and BTC can use Lightning. XBTC does not. Ordinary XBT and SHA-256d use Autarki's servers until you connect your own node under Settings, then Coin Nodes. XBTC uses Autarki's public node until you connect your own. The StartOS package and the Umbrel package do not include that node. A silent-payment code for an address of yours is used only after that node is connected. Until then the page gives a normal address. A code you type on Send uses your own node.
+**Wallet.** Receive, send, and a balance for Blake2b XBT bitcoin, for SHA-256 BTC bitcoin, and for XBTC. XBTC is the third chain. A shop checkout asks for XBT, BTC, or XBTC. Pay with XBTC is there when the XBTC node on this wallet is active and the shop published an XBTC account. Pay with XBT and Pay with BTC stay. A shipment does not offer XBTC. Blake2b XBT bitcoin and SHA-256 BTC bitcoin each have a Lightning node this wallet starts. XBTC does not. Blake2b XBT bitcoin and SHA-256 BTC bitcoin use Autarki's servers until you connect your own node under Settings, then Coin Nodes. XBTC uses Autarki's public node until you connect your own. The StartOS package and the Umbrel package do not include that node. A silent-payment code for an address of yours is used only after that node is connected. Until then the page gives a normal address. A code you type on Send uses your own node.
 
 **Shop.** A merchant builds the order on the page. Use it as an in-person point of sale, or set the shop to Online and take the order over Nostr. An online order can be shipped. The coins wait with the parcel until the buyer marks it received.
 
@@ -37,7 +51,7 @@ One page: Shop, Receive, Send, Balance, Ledger, Store, Mining, Classifieds, and 
 
 **Classifieds.** Goods, Services, Jobs, Rentals, Giveaways, and Personals. The detail is below.
 
-**Mining.** The Mining tab is on this page once this wallet is open. Hire a listed Blake2b rig with XBT, or a listed SHA-256 rig with BTC. The detail is below.
+**Mining.** The Mining tab is on this page once this wallet is open. Hire a listed Blake2b rig with Blake2b XBT bitcoin, or a listed SHA-256 rig with SHA-256 BTC bitcoin. The detail is below.
 
 **Nostr.** This is what keeps the sale off a platform. A shop is found, and an order arrives, without a website of your own. The stall, each product, and each classified are public notes. Anyone can read those notes. The order is a private note. The node that carries it cannot read it. A shop that runs its own Nostr node keeps those public notes on that machine. Autarki's node is the shared board until then. This wallet does not send the shop book to that shared node. Autarki's node does not charge to post.
 
@@ -47,11 +61,11 @@ Settings, then Nostr Node, then A copy of the shop, saves the catalog, the order
 
 Nostr is how a shop is found, and how an order reaches that shop, without a website of your own. Publish announces the shop name, the products for sale, and which nodes should receive an order. Check for orders brings a new order onto Check Outs. The amount due stays in sats. A counter sale can be a coin, Lightning, or what the clerk recorded: cash, a debit card, a credit card, a coupon, store credit, bitcoin, or a mix. The order itself does not move the money. When the clerk marks a counter sale paid, the customer's page shows that order under Ledger, then Receipts.
 
-The three chains are ordinary XBT, SHA-256d, and XBTC. XBTC is the third chain. Ordinary XBT and SHA-256d use Autarki's servers until you connect your own node under Settings, then Coin Nodes. A silent-payment code for an address of yours is used only after that node is connected. Until then the page gives a normal address. Paying a shop order uses the stall's silent-payment code from that order. A code you type on Send uses your own node. XBTC uses Autarki's public node until you connect your own. Where this copy includes Autarki's XBTC node, that node is used until you connect your own. The StartOS package and the Umbrel package do not include that node. Nostr uses Autarki's public node until you add another. Blake2b Lightning and SHA-256 Lightning are your own nodes. The seed stays in this wallet. The longer notes on those cards stay closed until you open them. The address, the certificate, and the channel amount stay on the page.
+The three chains are Blake2b XBT bitcoin, SHA-256 BTC bitcoin, and XBTC. XBTC is the third chain. Blake2b XBT bitcoin and SHA-256 BTC bitcoin use Autarki's servers until you connect your own node under Settings, then Coin Nodes. A silent-payment code for an address of yours is used only after that node is connected. Until then the page gives a normal address. Paying a shop order uses the stall's silent-payment code from that order. A code you type on Send uses your own node. XBTC uses Autarki's public node until you connect your own. Where this copy includes Autarki's XBTC node, that node is used until you connect your own. The StartOS package and the Umbrel package do not include that node. Nostr uses Autarki's public node until you add another. This wallet starts its own Blake2b XBT bitcoin Lightning node and its own SHA-256 BTC bitcoin Lightning node. The 24 words stay the on-chain wallet. Each Lightning seed is its own. The longer notes on those cards stay closed until you open them. A purchase opens a channel when the payment needs one. Open a channel is only for a peer you name yourself.
 
-On Receive, Send, Balance, and the till, the ordinary Bitcoin chip says BTC. Under Settings, then SHA-256 Lightning, the save button says Save BTC Lightning. Remove this node, under Settings, then Coin Nodes, hides that chain on those screens, on checkout, and on Check Outs. Use this node brings it back. The choice stays in this browser. A saved connection stays on this computer.
+On Receive, Send, Balance, and the till, the SHA-256 BTC bitcoin chip says BTC. The Blake2b XBT bitcoin chip says XBT. Remove this node, under Settings, then Coin Nodes, hides that chain on those screens, on checkout, and on Check Outs. Use this node brings it back. The choice stays in this browser. A saved connection stays on this computer. A Raspberry Pi package does not include the Lightning programs, and on that package the nodes stay off.
 
-On Umbrel you can run Knots for XBT, Knots for XBTC, or Bitcoin Core for SHA-256. XBT Knots and Bitcoin Core do not run on the same computer. XBTC Knots can run on the same computer as XBT Knots. This package does not treat Bitcoin Core as the XBT node. Blake2b Lightning is Lightning Fork, which PaulsCode made for XBT Knots. SHA-256 Lightning is LND, for Bitcoin Core. A giveaway, a personal, or a job you are hiring for can be posted with no coin node. A store catalog can be saved and announced too. Goods, a service, a rental, or a job offered for a price needs the XBT node or the Bitcoin node. One is enough. That ad can carry a payment code for each connected node. Buyers pay that shop on-chain after a coin node is connected and you publish the shop again.
+On Umbrel you can run Knots for Blake2b XBT bitcoin, Knots for XBTC, or Bitcoin Core for SHA-256 BTC bitcoin. XBT Knots and Bitcoin Core do not run on the same computer. XBTC Knots can run on the same computer as XBT Knots. This package does not treat Bitcoin Core as the Blake2b XBT bitcoin node. Blake2b XBT bitcoin is Bitcoin Knots. SHA-256 BTC bitcoin is Bitcoin Core. A giveaway, a personal, or a job you are hiring for can be posted with no coin node. A store catalog can be saved and announced too. Goods, a service, a rental, or a job offered for a price needs the Blake2b XBT bitcoin node or the SHA-256 BTC bitcoin node. One is enough. That ad can carry a payment code for each connected node. Buyers pay that shop on-chain after a coin node is connected and you publish the shop again.
 
 ## Ship an online order
 
@@ -91,7 +105,7 @@ A name on a post or an order is the display name that person published, or their
 
 ## Hire a listed rig
 
-Open a RouteHash account at https://routehash.com. Paste that account's API token on Mining, or under Settings. That account shows the Mine cards. Hire a listed Blake2b rig with XBT, or a listed SHA-256 rig with BTC.
+Open a RouteHash account at https://routehash.com. Paste that account's API token on Mining, or under Settings. That account shows the Mine cards. Hire a listed Blake2b rig with Blake2b XBT bitcoin, or a listed SHA-256 rig with SHA-256 BTC bitcoin.
 
 Mine writes a Lightning invoice for accepted shares and waits until you click Pay. Paying it starts that rig only. The button says Pay to start on the first invoice, and Pay to keep on a later invoice for a rig that is already hashing. Add Hash puts another rig on the same card. Blake2b is one card. SHA-256 is the other card.
 
