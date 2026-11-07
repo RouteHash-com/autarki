@@ -12,7 +12,7 @@ This wallet starts its own Lightning node for Blake2b XBT bitcoin and its own Li
 
 Run it on:
 
-- **StartOS**, on an AMD or Intel server (`autarki_x86_64.s9pk`) or a Raspberry Pi (`autarki_aarch64.s9pk`). The AMD or Intel package starts the built-in Lightning nodes. The Pi package does not. The reason is under [Raspberry Pi](#raspberry-pi). The package inside the files on release 0.1.0 is 0.1.0:26. The release tag stays 0.1.0. The pictures below are the current wallet.
+- **StartOS**, on an AMD or Intel server (`autarki_x86_64.s9pk`) or a Raspberry Pi (`autarki_aarch64.s9pk`). The AMD or Intel package starts the built-in Lightning nodes. The Pi package does not. The reason is under [Raspberry Pi](#raspberry-pi). The package inside the files on release 0.1.0 is 0.1.0:27. The release tag stays 0.1.0. Sideloading the StartOS package replaces 0.1.0:26, and the wallet stays. Use my location fills the postal code and the country code when the lookup has them. A ship-from address is a postal code and a country code. Each product for sale names its weight. Save profile shows a spinner, then says the profile is saved and Publish updates Nostr. Show this shop's key can print a one-page poster. Kind 38385 is a key handoff. The pictures below are the current wallet.
 - **Umbrel**, including Umbrel Home and a Raspberry Pi, on umbrelOS 1.x and on umbrelOS 2.0. Install from the RouteHash community store. This page has no umbrelOS file. On a Raspberry Pi, Lightning stays off. The reason is under [Raspberry Pi](#raspberry-pi).
 - **Ubuntu server** with Docker (`autarki_ubuntu_amd64.tar`). That file is the AMD or Intel build, and it includes Lightning. The steps are on the [Ubuntu page](https://github.com/RouteHash-com/autarki/blob/main/ubuntu/README.md).
 - **Docker images** `autarki_0.1.0_amd64.tar` and `autarki_0.1.0_arm64.tar`. Those images are from this build. They are not an umbrelOS install. The arm64 image is the Raspberry Pi build, and Lightning stays off on it.
@@ -103,7 +103,7 @@ The categories are Goods, Services, Jobs, Rentals, Giveaways, and Personals. Goo
 
 On Shop, search is a shop, a product, or a place. On Classifieds, search sits to the left of the keyword. Set location on that board searches a city. Use my location there asks the browser, then looks up the city. The position is not saved. Post and Check for orders are icons on the same row as Show Ignored and View blocked. My Ads, beside Post, shows the ads saved on this computer. Opening Post hides the ads. Edit is on your own classified card. Cancel on the ad form leaves it without saving. Save and Publish return to the board when they succeed. One buyer and one listing stay one unpaid order. With the store off, a classified sale still shows on Check Outs until it is paid, and on Sales after that. A classified ad and a store listing are saved to the same Nostr account on the relay(s); they use the same key. A Discord username can be shown beside the shop. The shop and the classified stay public. The link is not required to buy or sell. Publishing an ad does not require a store listing. Place notes sit on the Country row. Each connected coin node gets a silent-payment code, so a buyer can pay that chain. The buyer pay card uses the same code picture as a shop order, with the chain name in the center.
 
-Classifieds use their own node list. Kind 30402 is the classified. The stall and the products stay kinds 30017 and 30018. The nodes that receive an order are kind 10050. The private order is kind 1059. The order is a private note. The node that carries it cannot read it. If Shop or Classifieds comes back empty, check the node. If it allows every kind, leave it that way. If it only allows some kinds, allow 30402, 30017, 30018, 10050, and 1059. A whitelist that should check the receipt count also allows 38383 and 38384. A whitelist that should show the Discord link also allows 10011.
+Classifieds use their own node list. Kind 30402 is the classified. The stall and the products stay kinds 30017 and 30018. The nodes that receive an order are kind 10050. The private order is kind 1059. The order is a private note. The node that carries it cannot read it. If Shop or Classifieds comes back empty, check the node. If it allows every kind, leave it that way. If it only allows some kinds, allow 30402, 30017, 30018, 10050, and 1059. A whitelist that should check the receipt count also allows 38383 and 38384. A whitelist that should keep a shipment with a new name also allows kind 38385. A whitelist that should show the Discord link also allows 10011.
 
 A price line reads whole satoshis, then a US dollar or Canadian dollar figure as a hint, then now at market price. The amount due stays in sats. The word price opens the Neoxa market for BTCB2 and USDC:
 
@@ -125,7 +125,7 @@ Balance lists Open Shop Orders. Before the RouteHash account is saved, it says t
 
 ## Install on Umbrel
 
-This page does not give you an umbrelOS file. umbrelOS 1.x and umbrelOS 2.0 use the same listing. It is version 0.1.14. A wallet from 0.1.13 stays. If the store still shows 0.1.13, remove this community store and add the same address again.
+This page does not give you an umbrelOS file. umbrelOS 1.x and umbrelOS 2.0 use the same listing. It is version 0.1.16. A wallet from 0.1.15 stays. If the store still shows 0.1.15, remove this community store and add the same address again.
 
 1. In Umbrel, open Settings, then App stores, then Add a community app store.
 2. Paste this address:
@@ -168,13 +168,13 @@ The same release also attaches `autarki_0.1.0_amd64.tar` and `autarki_0.1.0_arm6
 
 | File | Bytes | SHA-256 |
 | --- | ---: | --- |
-| `autarki_x86_64.s9pk` | 407980502 | `0324a6fd7d63d16492c774d007fff34a1e565a1f802a9868dd553ab32ce331bd` |
-| `autarki_aarch64.s9pk` | 47057369 | `e73b8cd855ef4b147a55e549dd14bb7e153ba68f505c0b2a3f712e6283943c28` |
-| `autarki_0.1.0_amd64.tar` | 1477122048 | `1a2c8a8b7b9a0fb80ae8fb16f79f4d5e4a01c859c75aad46c15250bbe13487d6` |
-| `autarki_0.1.0_arm64.tar` | 178084352 | `2aa974394fe3f0b0dcb58acedf19b75dfec05954b4eaf573010cccebed27e1f1` |
-| `autarki_ubuntu_amd64.tar` | 1477122048 | `db5db826c8fe49ab9aa7d349a24771ffc09aae09a7f6009a20b12d5645877d3b` |
+| `autarki_x86_64.s9pk` | 407997558 | `d2f6ce500c06313cf1a410a4cc87152c82688b5d72d07606fcbef549ceb7297c` |
+| `autarki_aarch64.s9pk` | 47139961 | `294a545aea04500fcbc6403168fbc4582ccacc404c93631471fd833055c49bb9` |
+| `autarki_0.1.0_amd64.tar` | 1477493760 | `8ecd7a157f323e57a3e51cb5cf8090dede7f0a08ac344540704e884e23643615` |
+| `autarki_0.1.0_arm64.tar` | 178387456 | `d8b03f5ddd8358b2c9efd07e3588a65379b2064d161ff10ebd56425f022a0a53` |
+| `autarki_ubuntu_amd64.tar` | 1477493760 | `5d83221e88b19bdcc85b69f7a1e6b51281ed5fb9ac57466315b496c046553ae5` |
 
-The package version inside each StartOS file is 0.1.0:26. Sideloading it replaces 0.1.0:25, and the wallet stays.
+The package version inside each StartOS file is 0.1.0:27. Sideloading it replaces 0.1.0:26, and the wallet stays.
 
 ## Check the download
 
