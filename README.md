@@ -19,7 +19,7 @@ A self-custodial wallet and a shop. You keep the 24 words. Details are at [autar
 
 ## Install
 
-Release [0.1.0](https://github.com/RouteHash-com/autarki/releases/tag/0.1.0). The StartOS package inside that tag is 0.1.0:27.
+Release [0.1.0](https://github.com/RouteHash-com/autarki/releases/tag/0.1.0). The StartOS package inside that tag is 0.1.0:28. The Umbrel listing is 0.1.17.
 
 - **StartOS.** `autarki_x86_64.s9pk` for AMD or Intel. `autarki_aarch64.s9pk` for Raspberry Pi.
 - **Umbrel.** Add the [RouteHash community store](https://github.com/RouteHash-com/umbrel-store), then install Autarki.
@@ -46,10 +46,10 @@ sha256sum -c SHA256SUMS --ignore-missing
 A matching file prints OK.
 
 ```
-d2f6ce500c06313cf1a410a4cc87152c82688b5d72d07606fcbef549ceb7297c  autarki_x86_64.s9pk
-294a545aea04500fcbc6403168fbc4582ccacc404c93631471fd833055c49bb9  autarki_aarch64.s9pk
-8ecd7a157f323e57a3e51cb5cf8090dede7f0a08ac344540704e884e23643615  autarki_0.1.0_amd64.tar
-d8b03f5ddd8358b2c9efd07e3588a65379b2064d161ff10ebd56425f022a0a53  autarki_0.1.0_arm64.tar
+21d49eaa1abc8b10c3007004f326821bb88e35744b280c78d3a6e475e5b45e10  autarki_x86_64.s9pk
+63dca94ee79e3518c631867da9e066b47d0bc1dbda42d171087268693ee3a6f9  autarki_aarch64.s9pk
+fd0c33b3a2a33613ce8850ce2acc7b04d7c4ae2d9eaaef491f06a9c23428cd4b  autarki_0.1.0_amd64.tar
+c24eb1302396f21afe625320f75095bad4ab91452751608e1844c4512334169d  autarki_0.1.0_arm64.tar
 5d83221e88b19bdcc85b69f7a1e6b51281ed5fb9ac57466315b496c046553ae5  autarki_ubuntu_amd64.tar
 464536e404062788098a87cd38315257e9db61e2a0aa8749617b50d037bd60f8  autarki-android.apk
 ```
