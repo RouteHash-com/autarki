@@ -30,7 +30,7 @@ Server install steps are on [autarki.app/install](https://autarki.app/install).
 
 ## Android beta
 
-Version 0.1.0 (1). The same program. The phone keeps its own wallet file. Restoring the 24 words makes a second copy. This package leaves the Lightning programs out. The page still offers Lightning and stays closed until a node is connected.
+Version 0.1.0 (3). The same program. The phone keeps its own wallet file. Restoring the 24 words makes a second copy. This package leaves the Lightning programs out. The page still offers Lightning and stays closed until a node is connected. A phone that already has 0.1.0 (1) has to uninstall that copy before this one will install.
 
 - [Request access](https://appdistribution.firebase.dev/i/2ae8a6c81ce866a4). Sign in with a Google account. Firebase emails the install.
 - Or download [autarki-android.apk](https://github.com/RouteHash-com/autarki/releases/download/0.1.0/autarki-android.apk) and allow the install. A 64-bit phone, Android 8 or newer.
@@ -51,5 +51,5 @@ d2f6ce500c06313cf1a410a4cc87152c82688b5d72d07606fcbef549ceb7297c  autarki_x86_64
 8ecd7a157f323e57a3e51cb5cf8090dede7f0a08ac344540704e884e23643615  autarki_0.1.0_amd64.tar
 d8b03f5ddd8358b2c9efd07e3588a65379b2064d161ff10ebd56425f022a0a53  autarki_0.1.0_arm64.tar
 5d83221e88b19bdcc85b69f7a1e6b51281ed5fb9ac57466315b496c046553ae5  autarki_ubuntu_amd64.tar
-9d4c82838cb283b289b6a997ffa2e543ce17dfdec17518dc1e829bb56370fdbd  autarki-android.apk
+d363de41ca136611cb3dc5c5614029b815b9b1affbbbbb34cb3c0401a9a15976  autarki-android.apk
 ```
