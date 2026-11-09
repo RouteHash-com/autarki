@@ -19,7 +19,7 @@ A self-custodial wallet and a shop. You keep the 24 words. Details are at [autar
 
 ## Install
 
-Release [0.1.0](https://github.com/RouteHash-com/autarki/releases/tag/0.1.0). The StartOS package inside that tag is 0.1.0:28. The Umbrel listing is 0.1.17.
+Release [0.1.0](https://github.com/RouteHash-com/autarki/releases/tag/0.1.0). The StartOS package inside that tag is 0.1.0:29. The Umbrel listing is 0.1.18.
 
 - **StartOS.** `autarki_x86_64.s9pk` for AMD or Intel. `autarki_aarch64.s9pk` for Raspberry Pi.
 - **Umbrel.** Add the [RouteHash community store](https://github.com/RouteHash-com/umbrel-store), then install Autarki.
@@ -30,7 +30,7 @@ Server install steps are on [autarki.app/install](https://autarki.app/install).
 
 ## Android beta
 
-Version 0.1.0 (5). The same program. The phone keeps its own wallet file. Restoring the 24 words makes a second copy. The page finishes opening. The same 99 digits do not rebuild a wallet. This phone adds its own randomness. The 24 words shown once are the only backup. This package leaves the Lightning programs out. The page still offers Lightning and stays closed until a node is connected. This file installs over 0.1.0 (4) and 0.1.0 (3). A phone that already has 0.1.0 (1) has to uninstall that copy before this one will install.
+Version 0.1.0 (16). The same program. The phone keeps its own wallet file. Restoring the 24 words makes a second copy. The same 99 digits do not rebuild a wallet. This phone adds its own randomness. The 24 words shown once are the only backup. Lightning for Blake2b XBT bitcoin and SHA-256 BTC bitcoin is in this package. This file installs over the previous signed 0.1.0 package. A phone that already has 0.1.0 (1) has to uninstall that copy before this one will install.
 
 - [Request access](https://appdistribution.firebase.dev/i/2ae8a6c81ce866a4). Sign in with a Google account. Firebase emails the install.
 - Or download [autarki-android.apk](https://github.com/RouteHash-com/autarki/releases/download/0.1.0/autarki-android.apk) and allow the install. A 64-bit phone, Android 8 or newer.
@@ -46,10 +46,10 @@ sha256sum -c SHA256SUMS --ignore-missing
 A matching file prints OK.
 
 ```
-21d49eaa1abc8b10c3007004f326821bb88e35744b280c78d3a6e475e5b45e10  autarki_x86_64.s9pk
-63dca94ee79e3518c631867da9e066b47d0bc1dbda42d171087268693ee3a6f9  autarki_aarch64.s9pk
-fd0c33b3a2a33613ce8850ce2acc7b04d7c4ae2d9eaaef491f06a9c23428cd4b  autarki_0.1.0_amd64.tar
-c24eb1302396f21afe625320f75095bad4ab91452751608e1844c4512334169d  autarki_0.1.0_arm64.tar
-5d83221e88b19bdcc85b69f7a1e6b51281ed5fb9ac57466315b496c046553ae5  autarki_ubuntu_amd64.tar
-464536e404062788098a87cd38315257e9db61e2a0aa8749617b50d037bd60f8  autarki-android.apk
+5bc9d2dce8cf6d26fd8c4e8dbb8feec29f6092ee1ec65a13376b6445cb6f39c8  autarki_x86_64.s9pk
+c7e896f86106f29835a4b51eaac350480fd55f89e8cee7e87aa7f1bbfb2a8265  autarki_aarch64.s9pk
+1ac3c9ad47285b1cecd1220fcabed1f1166b485e750243ca02b4600e34e91a45  autarki_0.1.0_amd64.tar
+2bfc6369d9825d4daf2e3087c97ea17bc79a661ac7976a545ca5d635cda0e87d  autarki_0.1.0_arm64.tar
+62736f2e1b985c8b1b58ff5e9970a16b70a97afd83245740c649c73b8e3649f1  autarki_ubuntu_amd64.tar
+85ee63fdeb5be7ac2feb5f8a231294e61b43123b4b390ac7b7c7405b26b09c29  autarki-android.apk
 ```
