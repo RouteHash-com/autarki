@@ -9,7 +9,7 @@ No platform. Just the sale.
 A self-custodial wallet and a shop. You keep the 24 words. You pay the person. Autarki does not hold the coins, clear the sale, or take a cut of the catalog price. Details are at [autarki.app](https://autarki.app/).
 
 - Look through shops before you make a wallet. Sending an order needs the wallet open.
-- Shop, receive, and send for XBT, BTC, and XBTC. Pay with XBT or Pay with BTC. Each payment stays in the coin you chose. XBTC is on-chain when that node is on, and it has no Lightning button.
+- Shop, receive, and send for XBT and BTC. Pay with XBT or Pay with BTC. Each payment stays in the coin you chose.
 - Until you connect your own node, ordinary addresses use Autarki's servers. A silent-payment code appears after your own node is connected.
 - Lightning for XBT and BTC starts with the wallet on AMD and Intel. You do not install a second Lightning app. Raspberry Pi and Umbrel arm64 omit the Lightning programs, so Lightning stays off there. On-chain still works on those packages.
 - Use other Autarki Lightning nodes is under Settings, then Coin Nodes. Leave it off on AMD and Intel to use the built-in nodes. Turn it on only for another Autarki that stays on. An open channel keeps the built-in nodes running. iPhone and Raspberry Pi keep that choice on.
@@ -26,7 +26,7 @@ A self-custodial wallet and a shop. You keep the 24 words. You pay the person. A
 
 ## Install
 
-Release [0.1.0](https://github.com/RouteHash-com/autarki/releases/tag/0.1.0). The StartOS package inside that tag is 0.1.0:31. The Umbrel listing is 0.1.19. The Raspberry Pi StartOS package and the Umbrel arm64 image are still the previous page.
+Release [0.1.0](https://github.com/RouteHash-com/autarki/releases/tag/0.1.0). The AMD and Intel StartOS package inside that tag is 0.1.0:31, built on 9 November 2026. The Ubuntu image, the Umbrel amd64 image, and Android 0.1.0 (17) are that same page. The Umbrel listing is 0.1.19. The Raspberry Pi StartOS package and the Umbrel arm64 image were built on 8 November 2026 and are still the previous page.
 
 - **StartOS.** `autarki_x86_64.s9pk` for AMD or Intel. `autarki_aarch64.s9pk` for Raspberry Pi.
 - **Umbrel.** Add the [RouteHash community store](https://github.com/RouteHash-com/umbrel-store), then install Autarki.
