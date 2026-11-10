@@ -6,16 +6,22 @@
 
 No platform. Just the sale.
 
-A self-custodial wallet and a shop. You keep the 24 words. Details are at [autarki.app](https://autarki.app/).
+A self-custodial wallet and a shop. You keep the 24 words. You pay the person. Autarki does not hold the coins, clear the sale, or take a cut of the catalog price. Details are at [autarki.app](https://autarki.app/).
 
-- Shop, receive, and send for XBT, BTC, and XBTC.
-- Lightning for XBT and BTC starts with the wallet on AMD and Intel. Raspberry Pi and Umbrel arm64 leave Lightning off.
+- Look through shops before you make a wallet. Sending an order needs the wallet open.
+- Shop, receive, and send for XBT, BTC, and XBTC. Pay with XBT or Pay with BTC. Each payment stays in the coin you chose. XBTC is on-chain when that node is on, and it has no Lightning button.
+- Until you connect your own node, ordinary addresses use Autarki's servers. A silent-payment code appears after your own node is connected.
+- Lightning for XBT and BTC starts with the wallet on AMD and Intel. You do not install a second Lightning app. Raspberry Pi and Umbrel arm64 omit the Lightning programs, so Lightning stays off there. On-chain still works on those packages.
 - Use other Autarki Lightning nodes is under Settings, then Coin Nodes. Leave it off on AMD and Intel to use the built-in nodes. Turn it on only for another Autarki that stays on. An open channel keeps the built-in nodes running. iPhone and Raspberry Pi keep that choice on.
-- The stall is public. The order is a private note.
-- Classifieds stay off until Enable Classifieds.
-- Pay Counter records cash, card, coupon, store credit, or coin. The card machine is the clerk's.
-- Hire a listed rig. Nothing is spent until you click Mine, or until the hours are confirmed.
-- A blank password stores the 24 words unencrypted on that device.
+- Use Autarki's pool is one channel you confirm, so a later sale can use it. Routing stays within 1,000 sats. The pool does not hold a shipment.
+- The stall is public. The order is a private note. The relay that carries the order cannot read it.
+- A shipment holds the coins on the seller's node until it is marked received. Not received asks a named referee. The referee does not hold the coins. With no decision, the window still sends the coins back.
+- Classifieds stay off until Enable Classifieds. Pick up can pay on-chain or with Lightning. Ship pays with Lightning. A giveaway, a personal, or a job hire can be posted with no coin node. Goods, a service, a rental, or a job offered for a price needs your own XBT node or Bitcoin node, because that ad publishes a silent-payment code.
+- Pay Counter records cash, card, coupon, store credit, or coin. The card machine is the clerk's. This page does not charge the card.
+- A private note goes to one person. It does not become an order and it does not move coins. There is no public chat.
+- Hire a listed rig. Rewards come back to this wallet. Nothing is spent until you click Mine, or until the hours are confirmed. This computer does not mine.
+- Completed shipments write the delivery count. Nobody types a star.
+- The 24 words restore the funds. They do not restore the shop book or a Lightning channel. A saved copy of the shop book leaves the words out. The same 99 digits do not rebuild a wallet. That device adds its own randomness. A blank password stores the 24 words unencrypted on that device.
 - Bugs go to [Discord #autarki](https://discord.gg/VBxvzQXvt).
 
 ## Install
@@ -35,6 +41,10 @@ Version 0.1.0 (17). The same program. The phone keeps its own wallet file. Resto
 
 - [Request access](https://appdistribution.firebase.dev/i/2ae8a6c81ce866a4). Sign in with a Google account. Firebase emails the install.
 - Or download [autarki-android.apk](https://github.com/RouteHash-com/autarki/releases/download/0.1.0/autarki-android.apk) and allow the install. A 64-bit phone, Android 8 or newer.
+
+## iPhone beta
+
+Version 0.1.0, build 4. The same wallet and shop. This build does not start Lightning. Use other Autarki Lightning nodes stays on, for another Autarki that stays running. It is not an App Store listing. Request an invite on the [install page](https://autarki.app/install#iphone).
 
 ## Check the download
 
