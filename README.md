@@ -45,7 +45,7 @@ Version 0.1.0 (32). The same program. The phone keeps its own wallet file. Resto
 
 ## iPhone beta
 
-Version 0.1.0, build 9. The same wallet and shop. This build does not start Lightning. Use other Autarki Lightning nodes stays on, for another Autarki that stays running. It is not an App Store listing. Request an invite on the [install page](https://autarki.app/install#iphone).
+Version 0.1.0, build 10. The same wallet and shop. This build does not start Lightning. Use other Autarki Lightning nodes stays on, for another Autarki that stays running. It is not an App Store listing. Request an invite on the [install page](https://autarki.app/install#iphone).
 
 ## Check the download
 
