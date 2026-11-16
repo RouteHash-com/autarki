@@ -36,7 +36,7 @@ The line for `autarki_ubuntu_amd64.tar` ends in `OK` when the download matches.
 
 | File | Bytes | SHA-256 |
 | --- | ---: | --- |
-| `autarki_ubuntu_amd64.tar` | 1480239104 | `480b6bf85d8765246553ae80ba2c4b98fbc7c1b96e070f4b1f699af3873beb90` |
+| `autarki_ubuntu_amd64.tar` | 1480508416 | `b9ea3f28eae86b6feef38ff2fb3a351c446472919d6bbb92c4ae6d5c3c82d70c` |
 
 ## Start
 

@@ -27,7 +27,7 @@ A self-custodial wallet and a shop. You keep the 24 words. You pay the person. A
 
 ## Install
 
-Release [0.1.0](https://github.com/RouteHash-com/autarki/releases/tag/0.1.0). The AMD and Intel StartOS package inside that tag is 0.1.0:43, built on 15 November 2026. The Ubuntu image, the Umbrel amd64 image, Android 0.1.0 (32), and the Raspberry Pi package are that same page. On a package that starts Lightning, a Lightning invoice in the other coin spends the coin this wallet already holds. Nothing is sent until a channel from this wallet can pay. Confirmation counts follow the chain tip. On a narrow screen, a coin description uses the full width and the running balance sits on the next line. An open channel shows You can pay, You can receive, and Channel size. Lightning stays off on the Umbrel community store, Raspberry Pi, and Umbrel arm64. The Umbrel listing is 0.1.26.
+Release [0.1.0](https://github.com/RouteHash-com/autarki/releases/tag/0.1.0). The AMD and Intel StartOS package inside that tag is 0.1.0:44, built on 15 November 2026. The Ubuntu image, the Umbrel amd64 image, Android 0.1.0 (34), and the Raspberry Pi package are that same page. Find a referee can be turned on from Settings, then Nostr, then Profile. A Discord username is optional. One Discord link shows that username. Otherwise the site shows the nostr name, or a shortened public name. Watch only, on Create a wallet, pastes an account public key. The words stay on the other wallet. This computer cannot sign. A public key with no path is refused. After the wallet is restored without its Lightning seeds, each chain still offers Restore this Lightning backup while the new seed is on screen. Open channels do not return. Coins still in that node's wallet come back after the scan. On a package that starts Lightning, a Lightning invoice in the other coin spends the coin this wallet already holds. Nothing is sent until a channel from this wallet can pay. Lightning stays off on the Umbrel community store, Raspberry Pi, and Umbrel arm64. The Umbrel listing is 0.1.27.
 
 - **StartOS.** `autarki_x86_64.s9pk` for AMD or Intel. `autarki_aarch64.s9pk` for Raspberry Pi.
 - **Umbrel.** Add the [RouteHash community store](https://github.com/RouteHash-com/umbrel-store), then install Autarki.
@@ -38,14 +38,14 @@ Server install steps are on [autarki.app/install](https://autarki.app/install).
 
 ## Android beta
 
-Version 0.1.0 (32). The same program. The phone keeps its own wallet file. Restoring the 24 words makes a second copy. The same 99 digits do not rebuild a wallet. This phone adds its own randomness. The 24 words shown once are the only backup. Lightning for Blake2b XBT bitcoin and SHA-256 BTC bitcoin is in this package. A Lightning invoice in the other coin spends the coin this wallet already holds. Nothing is sent until a channel from this wallet can pay. This file installs over the previous signed 0.1.0 package. A phone that already has 0.1.0 (1) has to uninstall that copy before this one will install.
+Version 0.1.0 (34). The same program. The phone keeps its own wallet file. Restoring the 24 words makes a second copy. The same 99 digits do not rebuild a wallet. This phone adds its own randomness. The 24 words shown once are the only backup. Lightning for Blake2b XBT bitcoin and SHA-256 BTC bitcoin is in this package. A Lightning invoice in the other coin spends the coin this wallet already holds. Nothing is sent until a channel from this wallet can pay. This file installs over the previous signed 0.1.0 package. A phone that already has 0.1.0 (1), or a copy installed by Play, has to uninstall that copy before this one will install.
 
 - [Request access](https://appdistribution.firebase.dev/i/2ae8a6c81ce866a4). Sign in with a Google account. Firebase emails the install.
 - Or download [autarki-android.apk](https://github.com/RouteHash-com/autarki/releases/download/0.1.0/autarki-android.apk) and allow the install. A 64-bit phone, Android 8 or newer.
 
 ## iPhone beta
 
-Version 0.1.0, build 10. The same wallet and shop. This build does not start Lightning. Use other Autarki Lightning nodes stays on, for another Autarki that stays running. It is not an App Store listing. Request an invite on the [install page](https://autarki.app/install#iphone).
+Version 0.1.0, build 11. The same wallet and shop. This build does not start Lightning. Use other Autarki Lightning nodes stays on, for another Autarki that stays running. It is not an App Store listing. Request an invite on the [install page](https://autarki.app/install#iphone).
 
 ## Check the download
 
@@ -58,10 +58,10 @@ sha256sum -c SHA256SUMS --ignore-missing
 A matching file prints OK.
 
 ```
-7080e21cac4e63f7b30ac2f688995a63e62d2c486d47768bbbfe6ae6a8d660b1  autarki_x86_64.s9pk
-8349de5e9fb8fa1bf9e33bd673307204fc5d06bae2a8fb65aa380e2440816877  autarki_aarch64.s9pk
-b385217332e1e6d6d422c91610ca3a3fb129d7b03c0ae1bdabecc0442ab59430  autarki_0.1.0_amd64.tar
-696027a7be4ef5fc1df0a60c19cb5fd5f9a3b81731a21e47949a86813d9ce093  autarki_0.1.0_arm64.tar
-480b6bf85d8765246553ae80ba2c4b98fbc7c1b96e070f4b1f699af3873beb90  autarki_ubuntu_amd64.tar
-838aa3c1a14a9cd251cfcf7b915b3e4f327f548a3eb18b290166ad8c5e9c802a  autarki-android.apk
+f3a6ddea0b36f919d7608c4349c2221c636962b339cc02d707fc1f122748c55e  autarki_x86_64.s9pk
+813f84b558b9c1309307a9fe5d0fdf8e23579e76a4f3de5c41f27eecce010815  autarki_aarch64.s9pk
+84967e412f8bc4c9d3412bc66f1e443e35db9819340c3902f54ef3083f6bc9ff  autarki_0.1.0_amd64.tar
+abf0dffd671ebc63ec289bf473bb821ecc200945b88966cf33c8c12c60b7c9c2  autarki_0.1.0_arm64.tar
+b9ea3f28eae86b6feef38ff2fb3a351c446472919d6bbb92c4ae6d5c3c82d70c  autarki_ubuntu_amd64.tar
+5f1a58fd1a548949ad64fd7b2b17aaef78794672f9f4d5f1a4e2d87dd97fae8d  autarki-android.apk
 ```
