@@ -27,7 +27,7 @@ A self-custodial wallet and a shop. You keep the 24 words. You pay the person. A
 
 ## Install
 
-Release [0.1.0](https://github.com/RouteHash-com/autarki/releases/tag/0.1.0). The AMD and Intel StartOS package inside that tag is 0.1.0:45, built on 15 November 2026. The Ubuntu image, the Umbrel amd64 image, Android 0.1.0 (35), and the Raspberry Pi package are that same page. Watch only asks for the account public key from the other wallet. Find a referee can be turned on from Settings, then Nostr, then Profile. A Discord username is optional. One Discord link shows that username. Otherwise the site shows the nostr name, or a shortened public name. Watch only, on Create a wallet, pastes an account public key. The words stay on the other wallet. This computer cannot sign. A public key with no path is refused. After the wallet is restored without its Lightning seeds, each chain still offers Restore this Lightning backup while the new seed is on screen. Open channels do not return. Coins still in that node's wallet come back after the scan. On a package that starts Lightning, a Lightning invoice in the other coin spends the coin this wallet already holds. Nothing is sent until a channel from this wallet can pay. Lightning stays off on the Umbrel community store, Raspberry Pi, and Umbrel arm64. The Umbrel listing is 0.1.28.
+Release [0.1.0](https://github.com/RouteHash-com/autarki/releases/tag/0.1.0). The AMD and Intel StartOS package inside that tag is 0.1.0:46, built on 16 November 2026. The Ubuntu image, the Umbrel amd64 image, Android 0.1.0 (36), and the Raspberry Pi package are that same page. Moving coins from the on-chain wallet into Lightning sits under the Lightning card. The From line stays hidden, because the on-chain card already shows that balance. After Prepare the transfer, Send opens on the summary. A pencil beside the amount returns to the amount field. The pace control says Adjust the fee rate. A fee already sent stays on its own card. Check again reads this wallet and does not send another fee. While a channel to Autarki's pool is opening, the Lightning card shows a spinner. Watch only asks for the account public key from the other wallet. Find a referee can be turned on from Settings, then Nostr, then Profile. A Discord username is optional. One Discord link shows that username. Otherwise the site shows the nostr name, or a shortened public name. Watch only, on Create a wallet, pastes an account public key. The words stay on the other wallet. This computer cannot sign. A public key with no path is refused. After the wallet is restored without its Lightning seeds, each chain still offers Restore this Lightning backup while the new seed is on screen. Open channels do not return. Coins still in that node's wallet come back after the scan. On a package that starts Lightning, a Lightning invoice in the other coin spends the coin this wallet already holds. Nothing is sent until a channel from this wallet can pay. Lightning stays off on the Umbrel community store, Raspberry Pi, and Umbrel arm64. The Umbrel listing is 0.1.29.
 
 - **StartOS.** `autarki_x86_64.s9pk` for AMD or Intel. `autarki_aarch64.s9pk` for Raspberry Pi.
 - **Umbrel.** Add the [RouteHash community store](https://github.com/RouteHash-com/umbrel-store), then install Autarki.
@@ -38,14 +38,14 @@ Server install steps are on [autarki.app/install](https://autarki.app/install).
 
 ## Android beta
 
-Version 0.1.0 (35). The same program. The phone keeps its own wallet file. Restoring the 24 words makes a second copy. The same 99 digits do not rebuild a wallet. This phone adds its own randomness. The 24 words shown once are the only backup. Lightning for Blake2b XBT bitcoin and SHA-256 BTC bitcoin is in this package. A Lightning invoice in the other coin spends the coin this wallet already holds. Nothing is sent until a channel from this wallet can pay. This file installs over the previous signed 0.1.0 package. A phone that already has 0.1.0 (1), or a copy installed by Play, has to uninstall that copy before this one will install.
+Version 0.1.0 (36). The same program. The phone keeps its own wallet file. Restoring the 24 words makes a second copy. The same 99 digits do not rebuild a wallet. This phone adds its own randomness. The 24 words shown once are the only backup. Lightning for Blake2b XBT bitcoin and SHA-256 BTC bitcoin is in this package. A Lightning invoice in the other coin spends the coin this wallet already holds. Nothing is sent until a channel from this wallet can pay. This file installs over the previous signed 0.1.0 package. A phone that already has 0.1.0 (1), or a copy installed by Play, has to uninstall that copy before this one will install.
 
 - [Request access](https://appdistribution.firebase.dev/i/2ae8a6c81ce866a4). Sign in with a Google account. Firebase emails the install.
 - Or download [autarki-android.apk](https://github.com/RouteHash-com/autarki/releases/download/0.1.0/autarki-android.apk) and allow the install. A 64-bit phone, Android 8 or newer.
 
 ## iPhone beta
 
-Version 0.1.0, build 12. The same wallet and shop. This build does not start Lightning. Use other Autarki Lightning nodes stays on, for another Autarki that stays running. It is not an App Store listing. Request an invite on the [install page](https://autarki.app/install#iphone).
+Version 0.1.0, build 14. The same wallet and shop. This build does not start Lightning. Use other Autarki Lightning nodes stays on, for another Autarki that stays running. It is not an App Store listing. Request an invite on the [install page](https://autarki.app/install#iphone).
 
 ## Check the download
 
@@ -58,10 +58,10 @@ sha256sum -c SHA256SUMS --ignore-missing
 A matching file prints OK.
 
 ```
-9d205fa55343c48534852d4c8c4c71687572b695293477c8a637557636fceab5  autarki_x86_64.s9pk
-4381b5285fe5d7e1c37174007b83ba4d7eb209a361b30a3f340411925fd3de7f  autarki_aarch64.s9pk
-6e18fc4d886f7fb6440ae88e8fbd265aa44e882ea6f9ca77165e8b8d771add20  autarki_0.1.0_amd64.tar
-218a30e00bf3df65b85a52357a25028b460f16e9ee8d9760ff22a509dc1db567  autarki_0.1.0_arm64.tar
-4cb610bd73caccc88f913b5cedabaa6744e510a2822993a8311ce8055044b650  autarki_ubuntu_amd64.tar
-ead727b775cd399b4d78e5a410b599d6812340fe9c065ca468743cfd6dfb0d01  autarki-android.apk
+0c293c84478e7f5a0e68ed34cffe0f85f6a42ecb2eeb27c0679ac167f1c6a312  autarki_x86_64.s9pk
+3d9bf2ce8898ca6dc0e23a00d02db2a6d91fe79c3430460150fd239bc6c3f755  autarki_aarch64.s9pk
+6dfd354f2c03ad7401e64f5f3d659472306a822edb4d4c9ee6a99dbda5eec056  autarki_0.1.0_amd64.tar
+018a15bf072ae369ee3c1c1ef30b208d9c486b8352b884f902309952aa73ef0a  autarki_0.1.0_arm64.tar
+cefd4579b25df9c0dd9666cc9f76e4e8b62e95c1917a66180ade21b758af6118  autarki_ubuntu_amd64.tar
+b1fc2dc6349cbc61ab4a4f7754cea59499953dffd26bbcc0f439d03b39c20336  autarki-android.apk
 ```
