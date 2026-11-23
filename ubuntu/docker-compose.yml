@@ -1,7 +1,7 @@
 services:
   # One shot, as root, so ./data belongs to the wallet user. No network.
   prepare:
-    image: sha256:59aecb7d5c48a734b2b194851219b258e0f50c258c2be21b37d018342ffce8a2
+    image: sha256:9f3f493db583235ff31948774bc54be9668131e33df8644cccd05963625f309b
     pull_policy: never
     user: "0:0"
     network_mode: none
@@ -20,7 +20,7 @@ services:
     volumes:
       - ./data:/data
   autarki:
-    image: sha256:59aecb7d5c48a734b2b194851219b258e0f50c258c2be21b37d018342ffce8a2
+    image: sha256:9f3f493db583235ff31948774bc54be9668131e33df8644cccd05963625f309b
     pull_policy: never
     user: "1000:1000"
     read_only: true
